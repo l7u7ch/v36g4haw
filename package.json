@@ -1,0 +1,38 @@
+{
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "v1",
+    "@mdx-js/react": "v1",
+    "gatsby": "^4.22.0",
+    "gatsby-plugin-canonical-urls": "^4.22.0",
+    "gatsby-plugin-image": "^2.22.0",
+    "gatsby-plugin-mdx": "3",
+    "gatsby-plugin-robots-txt": "^1.7.1",
+    "gatsby-plugin-sharp": "^4.22.0",
+    "gatsby-plugin-sitemap": "^5.22.0",
+    "gatsby-plugin-twitter": "^4.22.0",
+    "gatsby-remark-autolink-headers": "^5.22.0",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-embed-youtube": "^0.0.7",
+    "gatsby-remark-prismjs": "^6.22.0",
+    "gatsby-remark-table-of-contents": "^2.0.0",
+    "gatsby-source-contentful": "^7.20.0",
+    "prismjs": "^1.29.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rehype-katex": "5",
+    "remark-math": "3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "gatsby-plugin-postcss": "^5.22.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8"
+  }
+}
