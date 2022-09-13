@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 /* 
- * Prism.js
+ * gatsby-remark-prismjs
  * Reference: https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
  */
 
@@ -70,7 +70,8 @@
 }
 
 /* 
- * MDX
+ * gatsby-plugin-mdx
+ * Reference: https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/
  */
 
 #mdx > p,
