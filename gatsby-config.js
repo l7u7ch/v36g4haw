@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
-    siteUrl: "https://example.com/",
-    description: "A starter blog demonstrating what Gatsby can do.",
+    title: "XENEXE",
+    siteUrl: "https://xenexe.info/",
+    description: "XENEXE は，『暗黙知を形式知に』をコンセプトに運営している Tech 系のブログサイトです。",
   },
   plugins: [
     "gatsby-plugin-image",
