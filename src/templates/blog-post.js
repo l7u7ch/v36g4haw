@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Toc from "../components/toc";
+import Metadata from "../components/metadata";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -49,10 +50,19 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
           </div>
         </div>
         {/* 2. サイドブロック */}
-        <div class="hidden w-full max-w-xs lg:inline-block">
-          {/* 2.1. TOC */}
-          <div className=" sticky top-6 rounded-lg bg-slate-800 py-4 pr-4">
-            <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
+        <div className="hidden w-full max-w-xs lg:inline-block">
+          <div className="sticky top-6">
+            {/* 2.1. メタデータ */}
+            <Metadata
+              createdAt={contentfulBlogPost.createdAt}
+              updatedAt={contentfulBlogPost.updatedAt}
+              word={contentfulBlogPost.body.childMdx.rawBody.length}
+            />
+            <br />
+            {/* 2.2. TOC */}
+            <div className="rounded-lg bg-slate-800 py-4 pr-4">
+              <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
+            </div>
           </div>
         </div>
       </div>
@@ -88,9 +98,12 @@ export const pageQuery = graphql`
         childMdx {
           body
           excerpt(pruneLength: 160)
+          rawBody
           tableOfContents(maxDepth: 3)
         }
       }
+      createdAt(formatString: "YYYY-MM-DD")
+      updatedAt(formatString: "YYYY-MM-DD")
     }
   }
 `;
