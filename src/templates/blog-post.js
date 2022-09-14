@@ -16,6 +16,7 @@ import { MDXProvider } from "@mdx-js/react";
 const components = {
   h2: (props) => <h2 className="rounded-lg bg-slate-700 p-4 text-2xl" {...props} />,
   h3: (props) => <h3 className="text-2xl" {...props} />,
+  h4: (props) => <h4 className="text-xl" {...props} />,
   blockquote: (props) => <blockquote {...props} />,
   ul: (props) => <ul className="ml-6 list-disc" {...props} />,
   ol: (props) => <ol className="ml-6 list-decimal" {...props} />,
