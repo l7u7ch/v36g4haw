@@ -32,6 +32,9 @@ module.exports = {
             options: { icon: false },
           },
           {
+            resolve: "gatsby-remark-external-links",
+          },
+          {
             resolve: "gatsby-remark-prismjs",
             options: { showLineNumbers: true },
           },
