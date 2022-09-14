@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import Toc from "../components/toc";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -49,7 +50,10 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
         </div>
         {/* 2. サイドブロック */}
         <div class="hidden w-full max-w-xs lg:inline-block">
-          <div className=" rounded-lg bg-slate-800 py-32 text-center">準備中</div>
+          {/* 2.1. TOC */}
+          <div className=" sticky top-6 rounded-lg bg-slate-800 py-4 pr-4">
+            <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
+          </div>
         </div>
       </div>
     </Layout>
@@ -84,6 +88,7 @@ export const pageQuery = graphql`
         childMdx {
           body
           excerpt(pruneLength: 160)
+          tableOfContents(maxDepth: 3)
         }
       }
     }
