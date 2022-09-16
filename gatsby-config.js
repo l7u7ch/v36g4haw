@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `XENEXE`,
+        short_name: `XENEXE`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
