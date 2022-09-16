@@ -9,19 +9,13 @@ module.exports = {
     description: `XENEXE は，『暗黙知を形式知に』をコンセプトに運営している Tech 系のブログサイトです。`,
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-postcss`,
-    `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-twitter`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://xenexe.info/`,
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,21 +32,27 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-          `gatsby-remark-code-titles`,
-          `gatsby-remark-embed-youtube`,
-          `gatsby-remark-prismjs`,
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: { icon: false },
           },
+          `gatsby-remark-code-titles`,
+          `gatsby-remark-embed-youtube`,
           {
             resolve: `gatsby-remark-external-links`,
           },
+          `gatsby-remark-prismjs`,
         ],
         remarkPlugins: [require(`remark-math`)],
         rehypePlugins: [require(`rehype-katex`)],
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
