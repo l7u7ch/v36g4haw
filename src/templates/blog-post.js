@@ -58,6 +58,7 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
               createdAt={contentfulBlogPost.createdAt}
               updatedAt={contentfulBlogPost.updatedAt}
               word={contentfulBlogPost.body.childMdx.rawBody.length}
+              tags={contentfulBlogPost.tags}
             />
             <br />
             {/* 2.2. TOC */}
@@ -105,6 +106,7 @@ export const pageQuery = graphql`
       }
       createdAt(formatString: "YYYY-MM-DD")
       updatedAt(formatString: "YYYY-MM-DD")
+      tags
     }
   }
 `;

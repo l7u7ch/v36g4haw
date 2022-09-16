@@ -1,8 +1,8 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faCalendarDays, faFileLines, faRotate } from "@fortawesome/free-solid-svg-icons";
+import { faBookOpen, faCalendarDays, faFileLines, faRotate, faTag } from "@fortawesome/free-solid-svg-icons";
 
-const MetadataComponent = ({ createdAt, updatedAt, word }) => {
+const MetadataComponent = ({ createdAt, updatedAt, word, tags }) => {
   return (
     <div className="rounded-lg bg-slate-800">
       {/* 1. 投稿日 */}
@@ -27,11 +27,20 @@ const MetadataComponent = ({ createdAt, updatedAt, word }) => {
         {word} 文字
       </div>
       {/* 4. 読了時間 */}
-      <div className="flex justify-between px-6 py-4">
+      <div className="flex justify-between border-b-2 border-slate-700 px-6 py-4">
         <span>
           <FontAwesomeIcon icon={faBookOpen} fixedWidth /> 読了時間
         </span>
         約 {parseInt(word / 400)} 分
+      </div>
+      {/* 5. タグ */}
+      <div className="flex flex-wrap justify-between gap-y-4 px-6 py-4">
+        <span>
+          <FontAwesomeIcon icon={faTag} fixedWidth /> タグ
+        </span>
+        {tags.map((tag) => (
+          <span className="rounded-lg bg-slate-700 px-2 text-center">{tag}</span>
+        ))}
       </div>
     </div>
   );
