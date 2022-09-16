@@ -27,16 +27,13 @@ module.exports = {
         gatsbyRemarkPlugins: [
           "gatsby-remark-code-titles",
           "gatsby-remark-embed-youtube",
+          "gatsby-remark-prismjs",
           {
             resolve: "gatsby-remark-autolink-headers",
             options: { icon: false },
           },
           {
             resolve: "gatsby-remark-external-links",
-          },
-          {
-            resolve: "gatsby-remark-prismjs",
-            options: { showLineNumbers: true },
           },
         ],
         remarkPlugins: [require("remark-math")],
