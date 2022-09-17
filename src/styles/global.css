@@ -7,6 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-primary {
+    @apply flex h-10 w-10 items-center justify-center rounded-full border text-white duration-500;
+  }
+}
+
 /* 
  * gatsby-remark-prismjs
  * Reference: https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/

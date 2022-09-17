@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Toc from "../components/toc";
 import Metadata from "../components/metadata";
+import Author from "../components/author";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -53,16 +54,20 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
         </div>
         {/* 2. サイドブロック */}
         <div className="hidden w-full max-w-xs lg:inline-block">
+          {/*  */}
+          {/* 2.1. Author */}
+          <Author />
+          <br />
+          {/* 2.2. メタデータ */}
+          <Metadata
+            createdAt={contentfulBlogPost.createdAt}
+            updatedAt={contentfulBlogPost.updatedAt}
+            word={contentfulBlogPost.body.childMdx.rawBody.length}
+            tags={contentfulBlogPost.tags}
+          />
+          <br />
           <div className="sticky top-6">
-            {/* 2.1. メタデータ */}
-            <Metadata
-              createdAt={contentfulBlogPost.createdAt}
-              updatedAt={contentfulBlogPost.updatedAt}
-              word={contentfulBlogPost.body.childMdx.rawBody.length}
-              tags={contentfulBlogPost.tags}
-            />
-            <br />
-            {/* 2.2. TOC */}
+            {/* 2.3. TOC */}
             <div className="rounded-lg bg-slate-800 py-4 pr-4">
               <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
             </div>
@@ -108,6 +113,19 @@ export const pageQuery = graphql`
       createdAt(formatString: "YYYY-MM-DD")
       updatedAt(formatString: "YYYY-MM-DD")
       tags
+    }
+    site {
+      siteMetadata {
+        author {
+          name
+          bio
+          social {
+            mail
+            twitter
+            github
+          }
+        }
+      }
     }
   }
 `;

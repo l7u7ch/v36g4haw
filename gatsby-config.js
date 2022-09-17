@@ -7,6 +7,15 @@ module.exports = {
     title: `XENEXE`,
     siteUrl: `https://xenexe.info/`,
     description: `XENEXE は，『暗黙知を形式知に』をコンセプトに運営している Tech 系のブログサイトです。`,
+    author: {
+      name: `l7u7ch`,
+      bio: `コンピュータサイエンスを専攻している大学院生です。研究の合間に，アニメを観たりブログサイトを運営しながら生きています。`,
+      social: {
+        mail: `ecfe76ad-8f27-4d7c-9dc4-0e4947164e54@slmail.me`,
+        twitter: `l7u7ch`,
+        github: `l7u7ch`,
+      },
+    },
   },
   plugins: [
     {
@@ -61,5 +70,13 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
   ],
 };

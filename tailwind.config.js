@@ -10,7 +10,11 @@ module.exports = {
     "./src/templates/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        twitter: { DEFAULT: "#1da1f2" },
+      },
+    },
   },
   plugins: [],
 };
