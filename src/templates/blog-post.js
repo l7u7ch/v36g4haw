@@ -25,6 +25,7 @@ const components = {
   td: (props) => <td className="p-4" {...props} />,
   th: (props) => <th className="border-b-2 border-slate-600 p-4" {...props} />,
   a: (props) => <a className="text-sky-500 hover:underline" {...props} />,
+  img: (props) => <img className="w-full rounded-lg" {...props} />,
   sup: (props) => <sup className="text-sky-500" {...props} />,
   iframe: (props) => <iframe className="aspect-video w-full" {...props} />,
 };
