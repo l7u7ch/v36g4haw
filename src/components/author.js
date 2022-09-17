@@ -30,9 +30,9 @@ const AuthorComponent = () => {
   `);
 
   return (
-    <div className="rounded-lg bg-slate-800 p-6">
+    <div className="rounded-lg bg-slate-800 p-6 text-center">
       {/* 1. Author Image */}
-      <GatsbyImage image={file.childImageSharp.gatsbyImageData} className={"m-auto mb-4 block w-1/3"} />
+      <GatsbyImage image={file.childImageSharp.gatsbyImageData} className={"mb-4 w-1/3"} />
       {/* 2. Author Name */}
       <div className="mb-4 text-center text-xl font-bold">{site.siteMetadata.author.name}</div>
       {/* 3. Author Bio */}
