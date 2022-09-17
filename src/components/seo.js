@@ -8,7 +8,6 @@ import { useStaticQuery, graphql } from "gatsby";
 const SeoComponent = ({ postId, title, description, image, type, locale }) => {
   const {
     site: { siteMetadata },
-    contentfulPerson,
   } = useStaticQuery(
     graphql`
       query {
@@ -17,10 +16,12 @@ const SeoComponent = ({ postId, title, description, image, type, locale }) => {
             title
             siteUrl
             description
+            author {
+              social {
+                twitter
+              }
+            }
           }
-        }
-        contentfulPerson {
-          twitter
         }
       }
     `
@@ -33,7 +34,7 @@ const SeoComponent = ({ postId, title, description, image, type, locale }) => {
   const mcImage = image || "";
   const mcType = type || "website";
   const mcLocale = locale || "ja-JP";
-  const mcTwitter = contentfulPerson.twitter || "";
+  const mcTwitter = siteMetadata.author.social.twitter || "";
 
   return (
     <>
