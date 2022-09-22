@@ -48,7 +48,7 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
           {/* 1.3. ボディー (MDX) */}
           <div id="mdx">
             <MDXProvider components={components}>
-              <MDXRenderer>{contentfulBlogPost.body.childMdx.body}</MDXRenderer>
+              {contentfulBlogPost.body ? <MDXRenderer>{contentfulBlogPost.body.childMdx.body}</MDXRenderer> : ""}
             </MDXProvider>
           </div>
         </div>
