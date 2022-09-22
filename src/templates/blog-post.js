@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
         {/* 1. メインブロック */}
         <div className="w-full max-w-3xl rounded-lg bg-slate-800 p-8">
           {/* 1.1. タイトル */}
-          <h1 className="text-2xl font-bold">{contentfulBlogPost.title}</h1>
+          {contentfulBlogPost.title ? <h1 className="text-2xl font-bold">{contentfulBlogPost.title}</h1> : ""}
           <br />
           {/* 1.2. ヒーローイメージ */}
           <div>
