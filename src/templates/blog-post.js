@@ -31,7 +31,7 @@ const components = {
   iframe: (props) => <iframe className="aspect-video w-full" {...props} />,
 };
 
-const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
+const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
   return (
     <Layout>
       <div className="flex justify-center gap-6">
@@ -42,7 +42,14 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
           <br />
           {/* 1.2. ヒーローイメージ */}
           <div>
-            <GatsbyImage image={contentfulBlogPost.heroImage.gatsbyImageData} className={"rounded-lg"} />
+            <GatsbyImage
+              image={
+                contentfulBlogPost.heroImage
+                  ? contentfulBlogPost.heroImage.gatsbyImageData
+                  : file.childImageSharp.gatsbyImageData
+              }
+              className={"rounded-lg"}
+            />
           </div>
           <br />
           {/* 1.3. ボディー (MDX) */}
@@ -99,6 +106,11 @@ export const Head = ({ data: { contentfulBlogPost } }) => {
 
 export const pageQuery = graphql`
   query ($id: String!) {
+    file(relativePath: { eq: "default-hero-image.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
     contentfulBlogPost(id: { eq: $id }) {
       id
       tags
