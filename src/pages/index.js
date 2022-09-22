@@ -21,7 +21,7 @@ const IndexPage = ({ data: { file, allContentfulBlogPost } }) => {
               className={"rounded-t-lg"}
             />
             <div className="p-4">
-              <div className="mb-2">{contentfulBlogPost.title}</div>
+              <div className="mb-2">{contentfulBlogPost.title ? contentfulBlogPost.title : "UNTITLED"}</div>
               <div className="text-right">
                 <FontAwesomeIcon className="" icon={faRotate} fixedWidth /> {contentfulBlogPost.updatedAt}
               </div>

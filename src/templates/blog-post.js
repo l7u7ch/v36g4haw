@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
         {/* 1. メインブロック */}
         <div className="w-full max-w-3xl rounded-lg bg-slate-800 p-8">
           {/* 1.1. タイトル */}
-          {contentfulBlogPost.title ? <h1 className="text-2xl font-bold">{contentfulBlogPost.title}</h1> : ""}
+          <h1 className="text-2xl font-bold">{contentfulBlogPost.title ? contentfulBlogPost.title : "UNTITLED"}</h1>
           <br />
           {/* 1.2. ヒーローイメージ */}
           <div>
@@ -95,11 +95,10 @@ export const Head = ({ data: { contentfulBlogPost } }) => {
   return (
     <Seo
       postId={contentfulBlogPost.id}
-      title={contentfulBlogPost.title}
-      description={contentfulBlogPost.body.childMdx.excerpt}
-      image={contentfulBlogPost.heroImage.url}
+      title={contentfulBlogPost.title ? contentfulBlogPost.title : "UNTITLED"}
+      description={contentfulBlogPost.body ? contentfulBlogPost.body.childMdx.excerpt : ""}
+      image={contentfulBlogPost.heroImage ? contentfulBlogPost.heroImage.url : ""}
       type="article"
-      locale="ja-JP"
     />
   );
 };
