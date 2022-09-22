@@ -97,7 +97,10 @@ export const pageQuery = graphql`
   query ($id: String!) {
     contentfulBlogPost(id: { eq: $id }) {
       id
+      tags
       title
+      createdAt(formatString: "YYYY-MM-DD")
+      updatedAt(formatString: "YYYY-MM-DD")
       heroImage {
         gatsbyImageData
         url
@@ -108,22 +111,6 @@ export const pageQuery = graphql`
           excerpt(pruneLength: 160)
           rawBody
           tableOfContents(maxDepth: 3)
-        }
-      }
-      createdAt(formatString: "YYYY-MM-DD")
-      updatedAt(formatString: "YYYY-MM-DD")
-      tags
-    }
-    site {
-      siteMetadata {
-        author {
-          name
-          bio
-          social {
-            mail
-            twitter
-            github
-          }
         }
       }
     }
