@@ -68,9 +68,13 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
           <br />
           <div className="sticky top-6">
             {/* 2.3. TOC */}
-            <div className="rounded-lg bg-slate-800 py-4 pr-4">
-              <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
-            </div>
+            {contentfulBlogPost.body && contentfulBlogPost.body.childMdx.tableOfContents.items ? (
+              <div className="rounded-lg bg-slate-800 py-4 pr-4">
+                <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
