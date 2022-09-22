@@ -62,8 +62,8 @@ const BlogPostTemplate = ({ data: { contentfulBlogPost } }) => {
           <Metadata
             createdAt={contentfulBlogPost.createdAt}
             updatedAt={contentfulBlogPost.updatedAt}
-            word={contentfulBlogPost.body.childMdx.rawBody.length}
-            tags={contentfulBlogPost.tags}
+            word={contentfulBlogPost.body ? contentfulBlogPost.body.childMdx.rawBody.length : 0}
+            tags={contentfulBlogPost.tags ? contentfulBlogPost.tags : []}
           />
           <br />
           <div className="sticky top-6">
