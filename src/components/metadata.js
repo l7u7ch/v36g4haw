@@ -34,7 +34,7 @@ const MetadataComponent = ({ createdAt, updatedAt, word, tags }) => {
         約 {parseInt(word / 400)} 分
       </div>
       {/* 5. タグ */}
-      <div className="flex flex-wrap justify-between gap-y-4 border-t-2 border-slate-700 px-6 py-4">
+      <div className="flex flex-wrap gap-4 border-t-2 border-slate-700 px-6 py-4">
         <span>
           <FontAwesomeIcon icon={faTag} fixedWidth /> タグ
         </span>
