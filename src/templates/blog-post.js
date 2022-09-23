@@ -26,7 +26,7 @@ const components = {
   td: (props) => <td className="p-4" {...props} />,
   th: (props) => <th className="border-b-2 border-slate-600 p-4" {...props} />,
   a: (props) => <a className="text-sky-500 hover:underline" {...props} />,
-  img: (props) => <img className="w-full rounded-lg" {...props} />,
+  img: (props) => <img className="w-full rounded-lg" {...props} alt="" />,
   sup: (props) => <sup className="text-sky-500" {...props} />,
   iframe: (props) => <iframe className="aspect-video w-full" {...props} />,
 };
@@ -38,16 +38,12 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
         {/* 1. メインブロック */}
         <div className="w-full max-w-3xl rounded-lg bg-slate-800 p-8">
           {/* 1.1. タイトル */}
-          <h1 className="text-2xl font-bold">{contentfulBlogPost.title ? contentfulBlogPost.title : "UNTITLED"}</h1>
+          <h1 className="text-2xl font-bold">{contentfulBlogPost.title || "UNTITLED"}</h1>
           <br />
           {/* 1.2. ヒーローイメージ */}
           <div>
             <GatsbyImage
-              image={
-                contentfulBlogPost.heroImage
-                  ? contentfulBlogPost.heroImage.gatsbyImageData
-                  : file.childImageSharp.gatsbyImageData
-              }
+              image={contentfulBlogPost.heroImage?.gatsbyImageData || file.childImageSharp.gatsbyImageData}
               className={"rounded-lg"}
             />
           </div>
@@ -55,7 +51,7 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
           {/* 1.3. ボディー (MDX) */}
           <div id="mdx">
             <MDXProvider components={components}>
-              {contentfulBlogPost.body ? <MDXRenderer>{contentfulBlogPost.body.childMdx.body}</MDXRenderer> : ""}
+              {contentfulBlogPost.body ? <MDXRenderer>{contentfulBlogPost.body.childMdx.body}</MDXRenderer> : undefined}
             </MDXProvider>
           </div>
         </div>
@@ -69,19 +65,13 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
           <Metadata
             createdAt={contentfulBlogPost.createdAt}
             updatedAt={contentfulBlogPost.updatedAt}
-            word={contentfulBlogPost.body ? contentfulBlogPost.body.childMdx.rawBody.length : 0}
-            tags={contentfulBlogPost.tags ? contentfulBlogPost.tags : []}
+            word={contentfulBlogPost.body?.childMdx.rawBody.length}
+            tags={contentfulBlogPost.tags || undefined}
           />
           <br />
           <div className="sticky top-6">
             {/* 2.3. TOC */}
-            {contentfulBlogPost.body && contentfulBlogPost.body.childMdx.tableOfContents.items ? (
-              <div className="rounded-lg bg-slate-800 py-4 pr-4">
-                <Toc props={contentfulBlogPost.body.childMdx.tableOfContents.items} />
-              </div>
-            ) : (
-              ""
-            )}
+            <Toc props={contentfulBlogPost.body?.childMdx.tableOfContents.items} />
           </div>
         </div>
       </div>
@@ -95,9 +85,9 @@ export const Head = ({ data: { contentfulBlogPost } }) => {
   return (
     <Seo
       postId={contentfulBlogPost.id}
-      title={contentfulBlogPost.title ? contentfulBlogPost.title : "UNTITLED"}
-      description={contentfulBlogPost.body ? contentfulBlogPost.body.childMdx.excerpt : ""}
-      image={contentfulBlogPost.heroImage ? contentfulBlogPost.heroImage.url : ""}
+      title={contentfulBlogPost.title || "UNTITLED"}
+      description={contentfulBlogPost.body?.childMdx.excerpt}
+      image={contentfulBlogPost.heroImage?.url}
       type="article"
     />
   );

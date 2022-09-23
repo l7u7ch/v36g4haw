@@ -2,7 +2,7 @@ import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faCalendarDays, faFileLines, faRotate, faTag } from "@fortawesome/free-solid-svg-icons";
 
-const MetadataComponent = ({ createdAt, updatedAt, word, tags }) => {
+const MetadataComponent = ({ createdAt, updatedAt, word = 0, tags = [] }) => {
   return (
     <div className="rounded-lg bg-slate-800">
       {/* 1. 投稿日 */}

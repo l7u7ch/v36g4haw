@@ -31,7 +31,7 @@ const SeoComponent = ({ postId, title, description, image, type, locale }) => {
     `
   );
 
-  // Metadata Content
+  // 初期化処理
   const URL = postId ? `${siteMetadata.siteUrl}/${postId}` : siteMetadata.siteUrl;
   const TITLE = title ? `${title} | ${siteMetadata.title}` : siteMetadata.title;
   const DESCRIPTION = description || siteMetadata.description;
