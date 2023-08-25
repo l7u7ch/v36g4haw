@@ -38,16 +38,14 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
         {/* 1. メインブロック */}
         <div className="w-full max-w-3xl rounded-lg bg-slate-800 p-8">
           {/* 1.1. タイトル */}
-          <h1 className="text-2xl font-bold">{contentfulBlogPost.title || "UNTITLED"}</h1>
-          <br />
+          <h1 className="mb-8 text-4xl font-bold">{contentfulBlogPost.title || "UNTITLED"}</h1>
           {/* 1.2. ヒーローイメージ */}
           <div>
             <GatsbyImage
               image={contentfulBlogPost.heroImage?.gatsbyImageData || file.childImageSharp.gatsbyImageData}
-              className={"rounded-lg"}
+              className={"mb-8 rounded-lg"}
             />
           </div>
-          <br />
           {/* 1.3. ボディー (MDX) */}
           <div id="mdx">
             <MDXProvider components={components}>
