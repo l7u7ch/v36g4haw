@@ -3,8 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotate } from "@fortawesome/free-solid-svg-icons";
+import { FaRotate } from "react-icons/fa6";
 
 const IndexPage = ({ data: { file, allContentfulBlogPost } }) => {
   return (
@@ -12,14 +11,17 @@ const IndexPage = ({ data: { file, allContentfulBlogPost } }) => {
       <div className="grid grid-cols-1 items-start gap-4 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {allContentfulBlogPost.nodes.map((contentfulBlogPost) => (
           <Link className="rounded-lg bg-slate-800 duration-500 hover:scale-105" to={contentfulBlogPost.id}>
+            {/* 1. ヒーローイメージ */}
             <GatsbyImage
               image={contentfulBlogPost.heroImage?.gatsbyImageData || file.childImageSharp.gatsbyImageData}
               className={"rounded-t-lg"}
             />
             <div className="p-4">
-              <div className="mb-2">{contentfulBlogPost.title || "UNTITLED"}</div>
-              <div className="text-right">
-                <FontAwesomeIcon className="" icon={faRotate} fixedWidth /> {contentfulBlogPost.updatedAt}
+              {/* 2. タイトル */}
+              <div className="mb-3">{contentfulBlogPost.title || "UNTITLED"}</div>
+              {/* 3.更新日 */}
+              <div className="flex items-center justify-end">
+                <FaRotate /> &nbsp; {contentfulBlogPost.updatedAt}
               </div>
             </div>
           </Link>

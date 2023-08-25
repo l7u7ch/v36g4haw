@@ -11,9 +11,11 @@ module.exports = {
       name: `l7u7ch`,
       bio: `コンピュータサイエンスを専攻している大学院生です。研究の合間に，アニメを観たりブログサイトを運営しながら生きています。`,
       social: {
-        mail: `ecfe76ad-8f27-4d7c-9dc4-0e4947164e54@slmail.me`,
-        twitter: `l7u7ch`,
         github: `l7u7ch`,
+        mail: `ecfe76ad-8f27-4d7c-9dc4-0e4947164e54@slmail.me`,
+        misskeyId: `l7u7ch`,
+        misskeyServer: `misskey.io`,
+        twitter: `l7u7ch`,
       },
     },
   },

@@ -1,9 +1,9 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { GrMail } from "react-icons/gr";
+import { PiGithubLogoFill } from "react-icons/pi";
+import { SiMisskey } from "react-icons/si";
 
 const AuthorComponent = () => {
   const { file, site } = useStaticQuery(graphql`
@@ -19,9 +19,10 @@ const AuthorComponent = () => {
             name
             bio
             social {
-              mail
-              twitter
               github
+              mail
+              misskeyId
+              misskeyServer
             }
           }
         }
@@ -42,32 +43,32 @@ const AuthorComponent = () => {
         {/* 4.1. Mail */}
         <a
           aria-label="mail"
-          className="btn-primary border-emerald-500 bg-emerald-500 hover:bg-slate-800 hover:text-emerald-500"
+          className="btn-primary border-0 bg-sky-600 hover:bg-slate-700"
           href={`mailto:${site.siteMetadata.author.social.mail}`}
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faEnvelope} fixedWidth />
+          <GrMail />
         </a>
-        {/* 4.2. Twitter */}
+        {/* 4.2. Misskey */}
         <a
-          aria-label="twitter"
-          className="btn-primary border-twitter bg-twitter hover:bg-slate-800 hover:text-twitter"
-          href={`https://twitter.com/${site.siteMetadata.author.social.twitter}`}
+          aria-label="misskey"
+          className="btn-primary border-0 bg-teal-600 hover:bg-slate-700"
+          href={`https://${site.siteMetadata.author.social.misskeyServer}/@${site.siteMetadata.author.social.misskeyId}`}
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faTwitter} fixedWidth />
+          <SiMisskey />
         </a>
         {/* 4.3. Github */}
         <a
           aria-label="github"
-          className="btn-primary border-white bg-white text-2xl text-slate-800 hover:bg-slate-800 hover:text-white"
+          className="btn-primary border-0 bg-slate-600 hover:bg-black"
           href={`https://github.com/${site.siteMetadata.author.social.github}`}
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faGithub} fixedWidth />
+          <PiGithubLogoFill />
         </a>
       </div>
     </div>

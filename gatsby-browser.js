@@ -19,10 +19,3 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css";
  */
 
 import "katex/dist/katex.min.css";
-
-/*
- * Import CSS for Font Awesome
- * https://fontawesome.com/
- */
-
-import "@fortawesome/fontawesome-svg-core/styles.css";
