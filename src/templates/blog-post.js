@@ -18,7 +18,7 @@ const components = {
   h2: (props) => <h2 className="rounded-lg bg-slate-700 p-4 text-2xl" {...props} />,
   h3: (props) => <h3 className="text-2xl" {...props} />,
   h4: (props) => <h4 className="text-xl" {...props} />,
-  blockquote: (props) => <blockquote className="my-4 border-l-8 border-slate-600 px-4 py-2" {...props} />,
+  blockquote: (props) => <blockquote className="border-l-8 border-slate-600 px-4 py-2" {...props} />,
   ul: (props) => <ul className="ml-6 list-disc" {...props} />,
   ol: (props) => <ol className="ml-6 list-decimal" {...props} />,
   table: (props) => <table className=" w-full rounded-lg bg-slate-700" {...props} />,
