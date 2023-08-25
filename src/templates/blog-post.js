@@ -57,7 +57,6 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
         </div>
         {/* 2. サイドブロック */}
         <div className="hidden w-full max-w-xs lg:inline-block">
-          {/*  */}
           {/* 2.1. Author */}
           <Author />
           <br />
