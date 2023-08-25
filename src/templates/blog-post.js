@@ -19,7 +19,7 @@ const components = {
   h3: (props) => <h3 className="text-2xl" {...props} />,
   h4: (props) => <h4 className="text-xl" {...props} />,
   blockquote: (props) => <blockquote className="border-l-8 border-slate-600 px-4 py-2" {...props} />,
-  ul: (props) => <ul className="ml-6 list-disc" {...props} />,
+  ul: (props) => <ul className="ml-6 list-disc leading-8" {...props} />,
   ol: (props) => <ol className="ml-6 list-decimal" {...props} />,
   table: (props) => <table className=" w-full rounded-lg bg-slate-700" {...props} />,
   tr: (props) => <tr className="border-b-2 border-slate-600 p-4 last:border-b-0" {...props} />,
