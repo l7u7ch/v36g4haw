@@ -4,6 +4,7 @@ import Seo from "../components/seo";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { FaRotate } from "react-icons/fa6";
+import dayjs from "dayjs";
 
 const IndexPage = ({ data: { file, allContentfulBlogPost } }) => {
   return (
@@ -21,7 +22,7 @@ const IndexPage = ({ data: { file, allContentfulBlogPost } }) => {
               <div className="mb-3">{contentfulBlogPost.title || "UNTITLED"}</div>
               {/* 3.更新日 */}
               <div className="flex items-center justify-end">
-                <FaRotate /> &nbsp; {contentfulBlogPost.updatedAt}
+                <FaRotate /> &nbsp; {dayjs(contentfulBlogPost.updatedAt).format(`YYYY-MM-DD`)}
               </div>
             </div>
           </Link>
@@ -51,7 +52,7 @@ export const pageQuery = graphql`
         heroImage {
           gatsbyImageData
         }
-        updatedAt(formatString: "YYYY-MM-DD")
+        updatedAt
       }
     }
   }

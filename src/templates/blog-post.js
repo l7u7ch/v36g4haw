@@ -102,8 +102,8 @@ export const pageQuery = graphql`
       id
       tags
       title
-      createdAt(formatString: "YYYY-MM-DD")
-      updatedAt(formatString: "YYYY-MM-DD")
+      createdAt
+      updatedAt
       heroImage {
         gatsbyImageData
         url

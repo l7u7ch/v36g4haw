@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FaCalendarDays, FaRotate, FaFileLines, FaBookOpen } from "react-icons/fa6";
+import dayjs from "dayjs";
 
 const MetadataComponent = ({ createdAt, updatedAt, word = 0, tags = [] }) => {
   return (
@@ -9,14 +10,14 @@ const MetadataComponent = ({ createdAt, updatedAt, word = 0, tags = [] }) => {
         <span className="flex items-center">
           <FaCalendarDays /> &nbsp; 投稿日
         </span>
-        {createdAt}
+        {dayjs(createdAt).format(`YYYY-MM-DD`)}
       </div>
       {/* 2. 更新日 */}
       <div className="flex justify-between border-t-2 border-slate-700 px-6 py-4">
         <span className="flex items-center">
           <FaRotate /> &nbsp; 更新日
         </span>
-        {updatedAt}
+        {dayjs(updatedAt).format(`YYYY-MM-DD`)}
       </div>
       {/* 3. 文字数 */}
       <div className="flex justify-between border-t-2 border-slate-700 px-6 py-4">

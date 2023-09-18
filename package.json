@@ -8,6 +8,7 @@
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "algoliasearch": "^4.14.2",
+    "dayjs": "^1.11.9",
     "gatsby": "^4.22.0",
     "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-canonical-urls": "^4.22.0",
