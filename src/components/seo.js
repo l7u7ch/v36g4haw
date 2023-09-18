@@ -60,7 +60,7 @@ const SeoComponent = ({ postId, title, description, image, type, locale }) => {
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2369270801912255"
         crossorigin="anonymous"
-      ></script>
+      />
     </>
   );
 };
