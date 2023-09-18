@@ -55,6 +55,12 @@ const SeoComponent = ({ postId, title, description, image, type, locale }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={TWITTER} />
       <meta name="twitter:creator" content={TWITTER} />
+      {/* Google AdSense */}
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2369270801912255"
+        crossorigin="anonymous"
+      ></script>
     </>
   );
 };
