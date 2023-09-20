@@ -1,6 +1,7 @@
 .cache/
 .env.development
 .env.production
+.yarn
 node_modules/
 package-lock.json
 public/
