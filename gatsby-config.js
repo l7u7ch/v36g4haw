@@ -35,6 +35,15 @@ module.exports = {
         siteUrl: `https://xenexe.info/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-C2D1SC3BE5"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
