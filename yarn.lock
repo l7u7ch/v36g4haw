@@ -1737,7 +1737,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.22.15
   resolution: "@babel/runtime@npm:7.22.15"
   dependencies:
@@ -2372,7 +2372,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/mdx@npm:v1":
+"@mdx-js/mdx@npm:^1":
   version: 1.6.22
   resolution: "@mdx-js/mdx@npm:1.6.22"
   dependencies:
@@ -2399,7 +2399,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:v1":
+"@mdx-js/react@npm:^1":
   version: 1.6.22
   resolution: "@mdx-js/react@npm:1.6.22"
   peerDependencies:
@@ -8357,7 +8357,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-mdx@npm:3":
+"gatsby-plugin-mdx@npm:^3":
   version: 3.20.0
   resolution: "gatsby-plugin-mdx@npm:3.20.0"
   dependencies:
@@ -13965,7 +13965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.1.0":
+"react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -14068,7 +14068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.1.0":
+"react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -14719,17 +14719,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@mdx-js/mdx": v1
-    "@mdx-js/react": v1
+    "@mdx-js/mdx": ^1
+    "@mdx-js/react": ^1
     algoliasearch: ^4.14.2
     autoprefixer: ^10.4.8
     dayjs: ^1.11.9
     gatsby: ^4.22.0
     gatsby-plugin-algolia: ^0.26.0
     gatsby-plugin-canonical-urls: ^4.22.0
+    gatsby-plugin-google-gtag: ^5.12.0
     gatsby-plugin-image: ^2.22.0
     gatsby-plugin-manifest: ^4.23.0
-    gatsby-plugin-mdx: 3
+    gatsby-plugin-mdx: ^3
     gatsby-plugin-offline: ^5.23.0
     gatsby-plugin-postcss: ^5.22.0
     gatsby-plugin-robots-txt: ^1.7.1
@@ -14749,9 +14750,9 @@ __metadata:
     prettier: ^2.7.1
     prettier-plugin-tailwindcss: ^0.1.13
     prismjs: ^1.29.0
-    react: ^18.1.0
+    react: ^18.2.0
     react-anchor-link-smooth-scroll: ^1.0.12
-    react-dom: ^18.1.0
+    react-dom: ^18.2.0
     react-icons: ^4.10.1
     react-instantsearch-dom: ^6.33.0
     rehype-katex: 5
