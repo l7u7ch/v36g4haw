@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { GrMail } from "react-icons/gr";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { SiMisskey } from "react-icons/si";
 
@@ -20,7 +19,6 @@ const AuthorComponent = () => {
             bio
             social {
               github
-              mail
               misskeyId
               misskeyServer
             }
@@ -40,17 +38,7 @@ const AuthorComponent = () => {
       <div className="mb-6">{site.siteMetadata.author.bio}</div>
       {/* 4. Social Button */}
       <div className="flex justify-center gap-6">
-        {/* 4.1. Mail */}
-        <a
-          aria-label="mail"
-          className="btn-primary border-0 bg-sky-600 hover:bg-slate-700"
-          href={`mailto:${site.siteMetadata.author.social.mail}`}
-          rel="nofollow noopener noreferrer"
-          target="_blank"
-        >
-          <GrMail />
-        </a>
-        {/* 4.2. Misskey */}
+        {/* 4.1. Misskey */}
         <a
           aria-label="misskey"
           className="btn-primary border-0 bg-teal-600 hover:bg-slate-700"
@@ -60,7 +48,7 @@ const AuthorComponent = () => {
         >
           <SiMisskey />
         </a>
-        {/* 4.3. Github */}
+        {/* 4.2. Github */}
         <a
           aria-label="github"
           className="btn-primary border-0 bg-slate-600 hover:bg-black"
