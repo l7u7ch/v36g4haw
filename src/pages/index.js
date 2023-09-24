@@ -45,7 +45,7 @@ export const pageQuery = graphql`
         gatsbyImageData
       }
     }
-    allContentfulBlogPost(sort: { fields: updatedAt, order: DESC }) {
+    allContentfulBlogPost(sort: {updatedAt: DESC}) {
       nodes {
         id
         title
