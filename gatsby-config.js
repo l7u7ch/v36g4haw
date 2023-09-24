@@ -80,7 +80,6 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

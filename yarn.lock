@@ -8614,17 +8614,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-twitter@npm:^5.12.0":
-  version: 5.12.0
-  resolution: "gatsby-plugin-twitter@npm:5.12.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-  peerDependencies:
-    gatsby: ^5.0.0-next
-  checksum: f21f3e943c9bdcb1802dd4bd23f615b54ac66e4347619eca721671f1fac99eb5cdac3a7517478b017f3fae73ebd8257add1618cb2454bbd038aad58256275bdf
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-typescript@npm:^5.12.0":
   version: 5.12.0
   resolution: "gatsby-plugin-typescript@npm:5.12.0"
@@ -14857,7 +14846,6 @@ __metadata:
     gatsby-plugin-robots-txt: ^1.8.0
     gatsby-plugin-sharp: ^5.12.0
     gatsby-plugin-sitemap: ^6.12.0
-    gatsby-plugin-twitter: ^5.12.0
     gatsby-remark-autolink-headers: ^6.12.0
     gatsby-remark-code-titles: ^1.1.0
     gatsby-remark-external-links: ^0.0.4
