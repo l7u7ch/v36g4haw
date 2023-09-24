@@ -65,7 +65,6 @@ module.exports = {
             options: { icon: false },
           },
           `gatsby-remark-code-titles`,
-          `gatsby-remark-embed-youtube`,
           {
             resolve: `gatsby-remark-external-links`,
           },
