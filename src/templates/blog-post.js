@@ -25,7 +25,7 @@ const components = {
   tr: (props) => <tr className="border-b-2 border-slate-600 p-4 last:border-b-0" {...props} />,
   td: (props) => <td className="p-4" {...props} />,
   strong: (props) => <strong className="underline decoration-red-600" {...props} />,
-  th: (props) => <th className="border-b-2 border-slate-600 p-4" {...props} />,
+  hr: (props) => <hr className="border-slate-700" {...props} />,
   a: (props) => <a className="text-sky-500 hover:underline" {...props} />,
   sup: (props) => <sup className="text-sky-500" {...props} />,
 };
