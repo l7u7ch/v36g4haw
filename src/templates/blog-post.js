@@ -64,7 +64,6 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
             createdAt={contentfulBlogPost.createdAt}
             updatedAt={contentfulBlogPost.updatedAt}
             word={contentfulBlogPost.body?.childMdx.rawBody.length}
-            tags={contentfulBlogPost.tags || undefined}
           />
           <br />
           <div className="sticky top-6">
@@ -100,7 +99,6 @@ export const pageQuery = graphql`
     }
     contentfulBlogPost(id: { eq: $id }) {
       id
-      tags
       title
       createdAt
       updatedAt

@@ -3,7 +3,6 @@ const pageQuery = `{
     nodes {
       id
       title
-      tags
       heroImage {
         url
         gatsbyImageData
@@ -16,10 +15,9 @@ const queries = [
   {
     query: pageQuery,
     transformer: ({ data }) =>
-      data.allContentfulBlogPost.nodes.map(({ id, title, tags, heroImage }) => ({
+      data.allContentfulBlogPost.nodes.map(({ id, title, heroImage }) => ({
         objectID: id,
         title,
-        tags,
         heroImage: heroImage ? heroImage.gatsbyImageData : "",
       })),
   },

@@ -2,7 +2,7 @@ import * as React from "react";
 import { FaCalendarDays, FaRotate, FaFileLines, FaBookOpen } from "react-icons/fa6";
 import dayjs from "dayjs";
 
-const MetadataComponent = ({ createdAt, updatedAt, word = 0, tags = [] }) => {
+const MetadataComponent = ({ createdAt, updatedAt, word = 0 }) => {
   return (
     <div className="rounded-lg bg-slate-800">
       {/* 1. 投稿日 */}
