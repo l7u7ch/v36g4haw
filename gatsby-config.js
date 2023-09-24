@@ -69,6 +69,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-external-links`,
           },
+          `gatsby-remark-images-contentful`,
           `gatsby-remark-prismjs`,
         ],
         remarkPlugins: [require(`remark-math`)],
