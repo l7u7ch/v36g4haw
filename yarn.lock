@@ -3420,7 +3420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdast@npm:^3.0.0, @types/mdast@npm:^3.0.3":
+"@types/mdast@npm:^3.0.0":
   version: 3.0.12
   resolution: "@types/mdast@npm:3.0.12"
   dependencies:
@@ -7694,7 +7694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"extend@npm:^3.0.0, extend@npm:^3.0.2":
+"extend@npm:^3.0.0":
   version: 3.0.2
   resolution: "extend@npm:3.0.2"
   checksum: a50a8309ca65ea5d426382ff09f33586527882cf532931cb08ca786ea3146c0553310bda688710ff61d7668eba9f96b923fe1420cdf56a2c3eaf30fcab87b515
@@ -8755,16 +8755,6 @@ __metadata:
     gatsby: ^5.0.0-next
     prismjs: ^1.15.0
   checksum: fb6d6ebb309e5ab91ce2d9e4cd76e9dc7afe80c23354bc84160d773e35439b6ac6ef6be7a12d29c30155de3f4c700d9b201a20061a14c5614a72fd87106f3a2d
-  languageName: node
-  linkType: hard
-
-"gatsby-remark-table-of-contents@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "gatsby-remark-table-of-contents@npm:2.0.0"
-  dependencies:
-    js-yaml: ^3.14.1
-    mdast-util-toc: ^5.1.0
-  checksum: 2e02c8542954df9f4869ff7b9ed639d989b6c3d604f6baeed0155fb462e5e400012546fb4292e4930ebfd6ee7cbe6554e88c8ed25cd1aebbb279e73494409245
   languageName: node
   linkType: hard
 
@@ -10747,7 +10737,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.13.1, js-yaml@npm:^3.14.1":
+"js-yaml@npm:^3.13.1":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -11639,21 +11629,6 @@ __metadata:
     unist-util-is: ^2.1.2
     unist-util-visit: ^1.1.0
   checksum: 7acf20c6a73d1eab781dd09726db8c05309d950d7ac06227b747a63feec87886d9d8a46b2e4974bd6355ff820cfb737acc74614c310c2df05e577010209770a3
-  languageName: node
-  linkType: hard
-
-"mdast-util-toc@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "mdast-util-toc@npm:5.1.0"
-  dependencies:
-    "@types/mdast": ^3.0.3
-    "@types/unist": ^2.0.3
-    extend: ^3.0.2
-    github-slugger: ^1.2.1
-    mdast-util-to-string: ^2.0.0
-    unist-util-is: ^4.0.0
-    unist-util-visit: ^2.0.0
-  checksum: dd1019f0f69deaa0985297f63ec97abcf7cc2f90c542bd513aa17055bc3784923bd8e8f5092e8d9e5ea736ffc55b315c25979939a718eca369224e4ade28ce57
   languageName: node
   linkType: hard
 
@@ -14899,7 +14874,6 @@ __metadata:
     gatsby-remark-external-links: ^0.0.4
     gatsby-remark-images-contentful: ^6.12.0
     gatsby-remark-prismjs: ^7.12.0
-    gatsby-remark-table-of-contents: ^2.0.0
     gatsby-source-contentful: ^8.12.0
     gatsby-source-filesystem: ^5.12.0
     gatsby-transformer-sharp: ^5.12.0
