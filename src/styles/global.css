@@ -31,7 +31,6 @@
 .gatsby-highlight {
   background-color: #0f172a;
   border-radius: 0.5em;
-  margin: 0.5em 0 2rem;
   padding: 1em;
   overflow: auto;
 }
@@ -78,18 +77,14 @@
  * Reference: https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/
  */
 
-#mdx > p,
-#mdx > h1,
-#mdx > h2,
-#mdx > h3,
-#mdx > h4,
-#mdx > h5,
-#mdx > h6,
-#mdx > blockquote,
-#mdx > ul,
-#mdx > ol,
-#mdx > table,
-#mdx > hr,
+#mdx > * {
+  margin-bottom: 2rem;
+}
+
+#mdx > .gatsby-code-title {
+  margin-bottom: 0rem;
+}
+
 .footnotes > hr {
   margin-bottom: 2rem;
 }
