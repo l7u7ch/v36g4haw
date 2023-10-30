@@ -71,8 +71,6 @@ module.exports = {
           `gatsby-remark-images-contentful`,
           `gatsby-remark-prismjs`,
         ],
-        remarkPlugins: [require(`remark-math`)],
-        rehypePlugins: [require(`rehype-katex`)],
       },
     },
     `gatsby-plugin-offline`,

@@ -34,9 +34,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "react-instantsearch-dom": "^6.40.4",
-    "rehype-katex": "5",
-    "remark-math": "3"
+    "react-instantsearch-dom": "^6.40.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
