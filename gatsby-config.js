@@ -65,9 +65,7 @@ module.exports = {
             options: { icon: false },
           },
           `gatsby-remark-code-titles`,
-          {
-            resolve: `gatsby-remark-external-links`,
-          },
+          `gatsby-remark-external-links`,
           `gatsby-remark-images-contentful`,
           `gatsby-remark-prismjs`,
         ],
