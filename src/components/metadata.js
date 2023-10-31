@@ -2,7 +2,7 @@ import * as React from "react";
 import { FaCalendarDays, FaRotate, FaFileLines, FaBookOpen } from "react-icons/fa6";
 import dayjs from "dayjs";
 
-const MetadataComponent = ({ createdAt, updatedAt, word = 0 }) => {
+const MetadataComponent = ({ createdAt = "1999-11-11", updatedAt = "1999-11-11", words = 0, timeToRead = 0 }) => {
   return (
     <div className="rounded-lg bg-slate-800">
       {/* 1. 投稿日 */}
@@ -24,14 +24,14 @@ const MetadataComponent = ({ createdAt, updatedAt, word = 0 }) => {
         <span className="flex items-center">
           <FaFileLines /> &nbsp; 文字数
         </span>
-        {word} 文字
+        {words} 文字
       </div>
       {/* 4. 読了時間 */}
       <div className="flex justify-between border-t-2 border-slate-700 px-6 py-4">
         <span className="flex items-center">
           <FaBookOpen /> &nbsp; 読了時間
         </span>
-        約 {parseInt(word / 400)} 分
+        約 {timeToRead} 分
       </div>
     </div>
   );

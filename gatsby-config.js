@@ -19,15 +19,15 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-        queries: require("./src/utils/algolia-queries"),
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-algolia`,
+    //   options: {
+    //     appId: process.env.ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
+    //     indexName: process.env.ALGOLIA_INDEX_NAME,
+    //     queries: require("./src/utils/algolia-queries"),
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -59,6 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -66,7 +67,7 @@ module.exports = {
           },
           `gatsby-remark-code-titles`,
           `gatsby-remark-external-links`,
-          `gatsby-remark-images-contentful`,
+          `gatsby-remark-images`,
           `gatsby-remark-prismjs`,
         ],
       },
@@ -77,18 +78,17 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: process.env.CONTENTFUL_HOST,
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
+        name: `posts`,
+        path: `${__dirname}/content/posts`,
       },
     },
     `gatsby-transformer-sharp`,

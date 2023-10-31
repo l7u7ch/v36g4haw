@@ -1,50 +1,33 @@
-/*
- * Reference: https://github.com/contentful/starter-gatsby-blog/blob/master/gatsby-node.js
- */
+// https://www.gatsbyjs.com/docs/how-to/routing/mdx/
 
 const path = require("path");
+const blogPost = path.resolve("./src/templates/blog-post.js");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve("./src/templates/blog-post.js");
-
   const result = await graphql(`
-    {
-      allContentfulBlogPost {
+    query {
+      allMdx {
         nodes {
           id
-          body {
-            childMdx {
-              body
-            }
-          }
+          slug
         }
       }
     }
   `);
 
   if (result.errors) {
-    reporter.panicOnBuild(`There was an error loading your Contentful posts`, result.errors);
-    return;
+    reporter.panicOnBuild("Error loading MDX result", result.errors);
   }
 
-  const posts = result.data.allContentfulBlogPost.nodes;
+  const posts = result.data.allMdx.nodes;
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostSlug = index === 0 ? null : posts[index - 1].slug;
-      const nextPostSlug = index === posts.length - 1 ? null : posts[index + 1].slug;
-
-      createPage({
-        path: post.id,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostSlug,
-          nextPostSlug,
-        },
-      });
+  posts.forEach((node) => {
+    createPage({
+      path: node.slug,
+      component: blogPost,
+      context: { id: node.id },
     });
-  }
+  });
 };

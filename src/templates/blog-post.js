@@ -9,10 +9,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 
-/*
- * MDXProvider
- * Reference: https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/
- */
+// MDXProvider：https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/
 
 const components = {
   h2: (props) => <h2 className="rounded-lg bg-slate-700 p-4 text-2xl" {...props} />,
@@ -31,25 +28,25 @@ const components = {
   sup: (props) => <sup className="text-sky-500" {...props} />,
 };
 
-const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
+const BlogPostTemplate = ({ data: { file, mdx } }) => {
   return (
     <Layout>
       <div className="flex justify-center gap-6">
         {/* 1. メインブロック */}
         <div className="w-full max-w-3xl rounded-lg bg-slate-800 p-8">
           {/* 1.1. タイトル */}
-          <h1 className="mb-8 text-4xl font-bold">{contentfulBlogPost.title || "UNTITLED"}</h1>
+          <h1 className="mb-8 text-4xl font-bold">{mdx.frontmatter.title || "UNTITLED"}</h1>
           {/* 1.2. ヒーローイメージ */}
           <div>
             <GatsbyImage
-              image={contentfulBlogPost.heroImage?.gatsbyImageData || file.childImageSharp.gatsbyImageData}
+              image={mdx.frontmatter.heroImage?.childImageSharp.gatsbyImageData || file.childImageSharp.gatsbyImageData}
               className={"mb-8 rounded-lg"}
             />
           </div>
           {/* 1.3. ボディー (MDX) */}
           <div id="mdx">
             <MDXProvider components={components}>
-              {contentfulBlogPost.body ? <MDXRenderer>{contentfulBlogPost.body.childMdx.body}</MDXRenderer> : undefined}
+              {mdx.body ? <MDXRenderer>{mdx.body}</MDXRenderer> : "UNTITLED"}
             </MDXProvider>
           </div>
         </div>
@@ -60,14 +57,15 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
           <br />
           {/* 2.2. メタデータ */}
           <Metadata
-            createdAt={contentfulBlogPost.createdAt}
-            updatedAt={contentfulBlogPost.updatedAt}
-            word={contentfulBlogPost.body?.childMdx.rawBody.length}
+            createdAt={mdx.frontmatter.createdAt}
+            updatedAt={mdx.frontmatter.updatedAt}
+            words={mdx.wordCount.words}
+            timeToRead={mdx.timeToRead}
           />
           <br />
           <div className="sticky top-6">
             {/* 2.3. TOC */}
-            <Toc props={contentfulBlogPost.body?.childMdx.tableOfContents.items} />
+            <Toc props={mdx.tableOfContents.items} />
           </div>
         </div>
       </div>
@@ -77,13 +75,13 @@ const BlogPostTemplate = ({ data: { file, contentfulBlogPost } }) => {
 
 export default BlogPostTemplate;
 
-export const Head = ({ data: { contentfulBlogPost } }) => {
+export const Head = ({ data: { mdx } }) => {
   return (
     <Seo
-      postId={contentfulBlogPost.id}
-      title={contentfulBlogPost.title || "UNTITLED"}
-      description={contentfulBlogPost.body?.childMdx.excerpt}
-      image={contentfulBlogPost.heroImage?.url}
+      postId={mdx.id}
+      title={mdx.frontmatter.title || "UNTITLED"}
+      description={mdx.excerpt}
+      image={mdx.frontmatter.heroImage?.publicURL}
       type="article"
     />
   );
@@ -96,22 +94,26 @@ export const pageQuery = graphql`
         gatsbyImageData
       }
     }
-    contentfulBlogPost(id: { eq: $id }) {
-      id
-      title
-      createdAt
-      updatedAt
-      heroImage {
-        gatsbyImageData
-        url
-      }
-      body {
-        childMdx {
-          body
-          excerpt(pruneLength: 160)
-          rawBody
-          tableOfContents(maxDepth: 3)
+    mdx(id: { eq: $id }) {
+      body
+      excerpt
+      frontmatter {
+        createdAt
+        heroImage {
+          childImageSharp {
+            gatsbyImageData
+          }
+          publicURL
         }
+        title
+        updatedAt
+      }
+      id
+      rawBody
+      tableOfContents
+      timeToRead
+      wordCount {
+        words
       }
     }
   }

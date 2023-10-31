@@ -6,23 +6,23 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { FaRotate } from "react-icons/fa6";
 import dayjs from "dayjs";
 
-const IndexPage = ({ data: { file, allContentfulBlogPost } }) => {
+const IndexPage = ({ data: { file, allMdx } }) => {
   return (
     <Layout>
       <div className="grid grid-cols-1 items-start gap-4 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {allContentfulBlogPost.nodes.map((contentfulBlogPost) => (
-          <Link className="rounded-lg bg-slate-800 duration-500 hover:scale-105" to={contentfulBlogPost.id}>
+        {allMdx.nodes.map((mdx) => (
+          <Link className="rounded-lg bg-slate-800 duration-500 hover:scale-105" to={mdx.slug}>
             {/* 1. ヒーローイメージ */}
             <GatsbyImage
-              image={contentfulBlogPost.heroImage?.gatsbyImageData || file.childImageSharp.gatsbyImageData}
+              image={mdx.frontmatter.heroImage?.childImageSharp.gatsbyImageData || file.childImageSharp.gatsbyImageData}
               className={"rounded-t-lg"}
             />
             <div className="p-4">
               {/* 2. タイトル */}
-              <div className="mb-3">{contentfulBlogPost.title || "UNTITLED"}</div>
+              <div className="mb-3">{mdx.frontmatter.title || "UNTITLED"}</div>
               {/* 3.更新日 */}
               <div className="flex items-center justify-end">
-                <FaRotate /> &nbsp; {dayjs(contentfulBlogPost.updatedAt).format(`YYYY-MM-DD`)}
+                <FaRotate /> &nbsp; {dayjs(mdx.frontmatter.updatedAt).format(`YYYY-MM-DD`)}
               </div>
             </div>
           </Link>
@@ -45,15 +45,30 @@ export const pageQuery = graphql`
         gatsbyImageData
       }
     }
-    allContentfulBlogPost(sort: {updatedAt: DESC}) {
+    allMdx(sort: { frontmatter: { updatedAt: DESC } }) {
       nodes {
-        id
-        title
-        heroImage {
-          gatsbyImageData
+        frontmatter {
+          heroImage {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          title
+          updatedAt
         }
-        updatedAt
+        slug
       }
     }
   }
 `;
+
+// allContentfulBlogPost(sort: { updatedAt: DESC }) {
+//   nodes {
+//     id
+//     title
+//     heroImage {
+//       gatsbyImageData
+//     }
+//     updatedAt
+//   }
+// }
