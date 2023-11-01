@@ -2,7 +2,7 @@
 title: ブログ記事をローカルファイルで管理するか Headless CMS で管理するか
 createdAt: 2023-11-01 13:03
 updatedAt: 2023-11-01 13:19
-heroImage: 60dafc86.png
+heroImage: 9eb2a60f.png
 ---
 
 ## 1. はじめに
