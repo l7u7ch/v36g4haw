@@ -9,27 +9,25 @@ const SeoComponent = ({ postId, title, description, image, type, locale }) => {
   const {
     file,
     site: { siteMetadata },
-  } = useStaticQuery(
-    graphql`
-      query {
-        file(relativePath: { eq: "default-hero-image.png" }) {
-          publicURL
-        }
-        site {
-          siteMetadata {
-            title
-            siteUrl
-            description
-            author {
-              social {
-                twitter
-              }
+  } = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "default-hero-image.png" }) {
+        publicURL
+      }
+      site {
+        siteMetadata {
+          title
+          siteUrl
+          description
+          author {
+            social {
+              twitter
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   // 初期化処理
   const URL = postId ? `${siteMetadata.siteUrl}/${postId}` : siteMetadata.siteUrl;
