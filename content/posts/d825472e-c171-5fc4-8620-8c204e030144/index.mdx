@@ -1,8 +1,8 @@
 ---
 title: Proxmox 環境で動作する LXC コンテナに NFS を利用して外部ストレージをマウントする 3 つの方法
 createdAt: 2023-10-29T07:04:23.343Z
-updatedAt: 2023-10-29T07:04:23.343Z
-heroImage: 496bf04a.png
+updatedAt: 2023-11-02 10:45
+heroImage: c71c9530.png
 draft: false
 ---
 
@@ -27,6 +27,8 @@ draft: false
 ここまで設定できたら，コンテナのシェルを起動して nfs-commo をインストールします。nfs-common は,，Linux システムで NFS クライアントとして機能するためのパッケージです。このパッケージには，NFS 共有にアクセスするために必要なユーザースペースユーティリティや関連するファイルが含まれています。特に，NFS マウントや自動マウントのサポートに必要なツールやライブラリが提供され，これによりユーザーはリモートの NFS サーバからファイルを簡単に取得・共有することができます。nfs-common がインストール出来たら mount コマンドで外部ストレージをマウントして完了です。システム起動時に自動的にマウントする場合は /etc/fstab にコードを書き込みます。
 
 ```bash
+# Container Shell
+
 $ sudo apt update
 $ sudo apt install nfs-common -y
 $ sudo mount -t nfs 192.168.1.100:/exported/directory /mnt/nfs
@@ -38,7 +40,9 @@ $ echo "192.168.1.100:/exported/directory /mnt/ nfs defaults 0 0" >> /etc/fstab
 LXC コンテナ上で直接マウントする方法は，マウント処理が LXC コンテナ内で操作が完結するのでシンプルです。しかし，特権コンテナ上で Docker を併用する際は，/etc/pve/lxc/[ID].conf に以下のコードを追記するなどの追加操作が必要になる。
 
 ```bash
+# Node Shell
 # /etc/pve/lxc/[ID].conf
+
 lxc.apparmor.profile: unconfined
 lxc.cgroup.devices.allow: a
 lxc.cap.drop:
@@ -49,6 +53,8 @@ lxc.cap.drop:
 2 つ目の方法は，ノードレベルでマウントする方法です。まず初めに，任意ノードのシェルを立ち上げます。あとは，1 つ目の方法と同じです。nfs-common をインストールして，mount コマンドで外部ストレージをマウントします。
 
 ```bash
+# Node Shell
+
 $ sudo apt update
 $ sudo apt install nfs-common -y
 $ sudo mount -t nfs 192.168.1.100:/exported/directory /mnt/nfs
@@ -64,6 +70,8 @@ $ echo "192.168.1.100:/exported/directory /mnt/ nfs defaults 0 0" >> /etc/fstab
 次に，任意ノードのシェルで以下のコマンドを実行すれば作業は完了です。テキストエディタで /etc/pve/lxc/[ID].conf を直接編集しても大丈夫です。
 
 ```bash
+# Node Shell
+
 $ echo "mp0: /mnt/,mp=/mnt" >> /etc/pve/lxc/[ID].conf
 ```
 
@@ -75,13 +83,15 @@ $ echo "mp0: /mnt/,mp=/mnt" >> /etc/pve/lxc/[ID].conf
 
 ## 4. データセンターレベルでマウントする
 
-3 つ目の方法は，データセンターレベルでマウントする方法です。まず初めに，データセンター → ストレージから NFS を追加します。
+3 つ目の方法は，データセンターレベルでマウントする方法です。まず初めに，**データセンター → ストレージから NFS** を追加します。
 
 ![eb949290](eb949290.png)
 
 あとは，2 つ目の方法で行った作業と同じです。任意ノードのシェルで以下のコマンドを実行すれば作業は完了です。テキストエディタで /etc/pve/lxc/[ID].conf を直接編集しても大丈夫です。
 
 ```bash
+# Node Shell
+
 $ echo "mp0: /mnt/,mp=/mnt" >> /etc/pve/lxc/[ID].conf
 ```
 
