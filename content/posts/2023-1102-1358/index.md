@@ -1,5 +1,5 @@
 ---
-title: HyperTTS の使い方
+title: Anki アドオン HyperTTS の使い方
 createdAt: 2023-11-02 13:58
 updatedAt: 2023-11-02 14:24
 heroImage: 4e517401.png
