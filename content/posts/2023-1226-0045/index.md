@@ -1,7 +1,7 @@
 ---
 title: GHTorrent の MSR 2014 Mining Challenge Dataset の使い方
 createdAt: 2023-12-26 00:45
-updatedAt: 2023-12-26 00:45
+updatedAt: 2023-12-26 20:21
 heroImage: b71d9338.png
 ---
 
@@ -27,7 +27,7 @@ heroImage: b71d9338.png
 $ wget http://ghtorrent-downloads.ewi.tudelft.nl/datasets/msr14-mysql.gz
 $ mysql -u root -p
 Enter password: # root のパスワードを入力する
-mysql > create user 'msr14'@'%' identified by 'msr14';
+mysql> create user 'msr14'@'%' identified by 'msr14';
 mysql> create database msr14;
 mysql> GRANT ALL PRIVILEGES ON msr14.* TO 'msr14'@'%';
 mysql> flush privileges;
