@@ -8,6 +8,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
+import { FaPencil } from "react-icons/fa6";
 
 // MDXProvider：https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/
 
@@ -66,6 +67,18 @@ const BlogPostTemplate = ({ data: { file, mdx } }) => {
           <div className="sticky top-6">
             {/* 2.3. TOC */}
             <Toc props={mdx.tableOfContents.items} />
+            <br />
+            <div className="">
+              <a
+                aria-label="github"
+                className="flex items-center justify-center rounded-lg bg-slate-800 py-4 duration-500 hover:bg-slate-700"
+                href={`https://github.com/l7u7ch/xenexe/tree/master/content/posts/${mdx.slug}`}
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+              >
+                <FaPencil /> &nbsp; この記事にフィードバックする
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -110,6 +123,7 @@ export const pageQuery = graphql`
       }
       id
       rawBody
+      slug
       tableOfContents
       timeToRead
       wordCount {
