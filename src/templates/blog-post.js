@@ -68,17 +68,17 @@ const BlogPostTemplate = ({ data: { file, mdx } }) => {
             {/* 2.3. TOC */}
             <Toc props={mdx.tableOfContents.items} />
             <br />
-            <div className="">
-              <a
-                aria-label="github"
-                className="flex items-center justify-center rounded-lg bg-slate-800 py-4 duration-500 hover:bg-slate-700"
-                href={`https://github.com/l7u7ch/xenexe/tree/master/content/posts/${mdx.slug}`}
-                rel="nofollow noopener noreferrer"
-                target="_blank"
-              >
-                <FaPencil /> &nbsp; この記事にフィードバックする
-              </a>
-            </div>
+            <a
+              aria-label="github"
+              className="flex items-center justify-center rounded-lg bg-slate-800 py-4 duration-500 hover:bg-slate-700"
+              href={`https://github.com/l7u7ch/xenexe/tree/master/content/posts/${mdx.slug}/${mdx.fileAbsolutePath
+                .split("/")
+                .pop()}`}
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <FaPencil /> &nbsp; この記事にフィードバックする
+            </a>
           </div>
         </div>
       </div>
@@ -110,6 +110,7 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       body
       excerpt
+      fileAbsolutePath
       frontmatter {
         createdAt
         heroImage {
