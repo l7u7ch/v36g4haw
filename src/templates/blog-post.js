@@ -60,8 +60,7 @@ const BlogPostTemplate = ({ data: { file, mdx } }) => {
           <Metadata
             createdAt={mdx.frontmatter.createdAt}
             updatedAt={mdx.frontmatter.updatedAt}
-            words={mdx.wordCount.words}
-            timeToRead={mdx.timeToRead}
+            words={mdx.rawBody.length}
           />
           <br />
           <div className="sticky top-6">
@@ -126,10 +125,6 @@ export const pageQuery = graphql`
       rawBody
       slug
       tableOfContents
-      timeToRead
-      wordCount {
-        words
-      }
     }
   }
 `;
