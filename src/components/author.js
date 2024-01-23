@@ -41,7 +41,7 @@ const AuthorComponent = () => {
         {/* 4.1. Misskey */}
         <a
           aria-label="misskey"
-          className="btn-primary border-0 bg-teal-600 hover:bg-slate-700"
+          className="btn-primary h-12 w-12 bg-slate-700 hover:bg-slate-600"
           href={`https://${site.siteMetadata.author.social.misskeyServer}/@${site.siteMetadata.author.social.misskeyId}`}
           rel="nofollow noopener noreferrer"
           target="_blank"
@@ -51,7 +51,7 @@ const AuthorComponent = () => {
         {/* 4.2. Github */}
         <a
           aria-label="github"
-          className="btn-primary border-0 bg-slate-600 hover:bg-black"
+          className="btn-primary h-12 w-12 bg-slate-700 hover:bg-slate-600"
           href={`https://github.com/${site.siteMetadata.author.social.github}`}
           rel="nofollow noopener noreferrer"
           target="_blank"
