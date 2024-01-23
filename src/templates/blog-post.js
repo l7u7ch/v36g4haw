@@ -1,11 +1,11 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
-import Toc from "../components/toc";
-import Metadata from "../components/metadata";
 import Author from "../components/author";
-import Feedback from "../components/feedback";
+import Metadata from "../components/metadata";
 import Warning from "../components/warning";
+import Toc from "../components/toc";
+import Feedback from "../components/feedback";
+import Seo from "../components/seo";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
