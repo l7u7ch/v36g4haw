@@ -8,7 +8,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import { FaPencil } from "react-icons/fa6";
+import { FaPencil, FaTriangleExclamation } from "react-icons/fa6";
 
 // MDXProvider：https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/
 
@@ -64,10 +64,27 @@ const BlogPostTemplate = ({ data: { file, mdx } }) => {
           />
           <br />
           <div className="sticky top-6">
-            {/* 2.3. TOC */}
+            {/* 2.3. 警告 */}
+            {Math.floor((new Date() - new Date(mdx.frontmatter.updatedAt)) / (1000 * 60 * 60 * 24 * 30 * 12)) > 0 ? (
+              <>
+                <div className="rounded-lg bg-slate-800 p-4 text-center">
+                  <FaTriangleExclamation className="inline" />
+                  &nbsp;本記事は、最終更新日から
+                  <br />
+                  {Math.floor(
+                    (new Date() - new Date(mdx.frontmatter.updatedAt)) / (1000 * 60 * 60 * 24 * 30 * 12),
+                  )}{" "}
+                  年以上が経過しています。
+                </div>
+                <br />
+              </>
+            ) : (
+              ""
+            )}
+            {/* 2.4. TOC */}
             <Toc props={mdx.tableOfContents.items} />
             <br />
-            {/* 2.4. フィードバックボタン */}
+            {/* 2.5. フィードバックボタン */}
             <a
               aria-label="github"
               className="flex items-center justify-center rounded-lg bg-slate-800 py-4 duration-500 hover:bg-slate-700"
