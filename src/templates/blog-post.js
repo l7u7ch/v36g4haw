@@ -84,7 +84,7 @@ export default BlogPostTemplate;
 export const Head = ({ data: { mdx } }) => {
   return (
     <Seo
-      postId={mdx.id}
+      postId={mdx.slug}
       title={mdx.frontmatter.title || "UNTITLED"}
       description={mdx.excerpt}
       image={mdx.frontmatter.heroImage?.publicURL}
@@ -115,7 +115,6 @@ export const pageQuery = graphql`
         title
         updatedAt
       }
-      id
       rawBody
       slug
       tableOfContents
