@@ -67,6 +67,7 @@ const BlogPostTemplate = ({ data: { file, mdx } }) => {
             {/* 2.3. TOC */}
             <Toc props={mdx.tableOfContents.items} />
             <br />
+            {/* 2.4. フィードバックボタン */}
             <a
               aria-label="github"
               className="flex items-center justify-center rounded-lg bg-slate-800 py-4 duration-500 hover:bg-slate-700"
