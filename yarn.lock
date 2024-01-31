@@ -4343,7 +4343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"algoliasearch@npm:^4.20.0, algoliasearch@npm:^4.9.1":
+"algoliasearch@npm:^4.9.1":
   version: 4.20.0
   resolution: "algoliasearch@npm:4.20.0"
   dependencies:
@@ -14816,7 +14816,6 @@ __metadata:
   dependencies:
     "@mdx-js/mdx": ^1
     "@mdx-js/react": ^1
-    algoliasearch: ^4.20.0
     autoprefixer: ^10.4.16
     dayjs: ^1.11.10
     gatsby: ^5.12.9
