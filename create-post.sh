@@ -8,7 +8,7 @@ cat << EOF > "${folder_path}/index.md"
 ---
 title: UNTITLE
 createdAt: $current_datetime
-updatedAt: $current_datetime 
+updatedAt: $current_datetime
 heroImage: 
 ---
 EOF
