@@ -7,8 +7,8 @@ mkdir -p "$folder_path"
 cat << EOF > "${folder_path}/index.md"
 ---
 title: 'UNTITLE'
-publishedDateTime: '$current_datetime'
-updatedDateTime: '$current_datetime'
+publishedAt: '$current_datetime'
+updatedAt: '$current_datetime'
 heroImage: ''
 ---
 EOF
