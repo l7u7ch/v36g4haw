@@ -37,6 +37,7 @@ const posts = page.data
               {/* 3.更新日 */}
               <div class="flex items-center justify-end">
                 <FaRotate className="inline" />
+                &nbsp;
                 {` ${dayjs(post.data.updatedAt).format(`YYYY-MM-DD`)}`}
               </div>
             </div>
