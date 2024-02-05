@@ -1,0 +1,46 @@
+---
+import type { MarkdownHeading } from 'astro'
+
+interface Props {
+  headings: MarkdownHeading[]
+}
+
+const { headings } = Astro.props
+
+const filteredHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3)
+---
+
+<ul class="rounded-md bg-slate-800 p-3">
+  {
+    filteredHeadings.map((heading) => (
+      <li class={`${heading.depth === 3 && 'pl-6'}`}>
+        <a href={`#${heading.slug}`} class="block rounded-md px-3 py-3 duration-500 hover:bg-slate-700">
+          {heading.text}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<!-- Scrollspy -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+      root: null,
+      rootMargin: '-50% 0px',
+      threshold: 0,
+    }
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.querySelector('.active')?.classList.remove('active')
+          const newActiveIndex = document.querySelector(`a[href='#${entry.target.id}']`)
+          newActiveIndex?.classList.add('active')
+        }
+      })
+    }, options)
+    document.querySelectorAll('h2, h3').forEach((section) => {
+      intersectionObserver.observe(section)
+    })
+  })
+</script>

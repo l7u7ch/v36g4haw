@@ -1,0 +1,62 @@
+/*
+ * ToDo List in Markdown
+ */
+ul.contains-task-list {
+  @apply p-0;
+}
+ul.contains-task-list > li {
+  @apply list-none;
+}
+ul.contains-task-list > li > input[type='checkbox'] {
+  @apply m-0 mr-2;
+}
+
+/*
+ * Footnotes in Markdown
+ */
+[id^='user-content-fnref-']::before {
+  content: '[';
+}
+[id^='user-content-fnref-']::after {
+  content: ']';
+}
+
+/*
+ * Expressive Code：https://expressive-code.com/
+ */
+.expressive-code {
+  @apply my-6;
+}
+.expressive-code .frame.is-terminal .header::before {
+  background-image: linear-gradient(to right, #c95b5b 30%, 30%, #e0b054 70%, 70%, #62b162);
+  opacity: 0.8 !important;
+}
+
+/*
+ * Scrollspy
+ */
+.active {
+  @apply rounded-md bg-sky-900;
+}
+
+/* 
+ * Tailwind CSS / Typography 
+ */
+.prose {
+  @apply dark:prose-invert
+  prose-h2:rounded-md
+  prose-h2:bg-slate-700
+  prose-h2:p-6
+  prose-a:text-sky-500
+  prose-a:no-underline
+  hover:prose-a:text-red-600
+  prose-strong:border-b-2
+  prose-strong:border-red-600
+  prose-th:p-6
+  prose-td:p-6
+  prose-img:mx-auto
+  prose-img:rounded-md;
+}
+.prose a {
+  @apply duration-500;
+}

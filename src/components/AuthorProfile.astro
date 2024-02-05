@@ -1,0 +1,34 @@
+---
+import { AUTHOR_NAME, AUTHOR_BIO, GITHUB_ID, MISSKEY_SERVER, MISSKEY_ID } from '../consts'
+import { Image } from 'astro:assets'
+import { PiGithubLogoFill } from 'react-icons/pi'
+import { SiMisskey } from 'react-icons/si'
+import authorImage from '../assets/author-image.png'
+---
+
+<div class="rounded-md bg-slate-800 p-6 text-center">
+  <Image src={authorImage} alt="authorImage" class="m-auto w-1/3" />
+  <br />
+  <div>{AUTHOR_NAME}</div>
+  <br />
+  <div>{AUTHOR_BIO}</div>
+  <br />
+  <div class="flex justify-center gap-6">
+    <a
+      aria-label="github"
+      class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 hover:bg-slate-600"
+      href={`https://github.com/${GITHUB_ID}`}
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+      ><PiGithubLogoFill />
+    </a>
+    <a
+      aria-label="misskey"
+      class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 hover:bg-slate-600"
+      href={`https://${MISSKEY_SERVER}/@${MISSKEY_ID}`}
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+      ><SiMisskey />
+    </a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+---
+import { FaTriangleExclamation } from 'react-icons/fa6'
+
+interface Props {
+  elapsedYears: number
+}
+
+const { elapsedYears } = Astro.props
+---
+
+<div class="rounded-md bg-slate-800 p-6 text-center">
+  <FaTriangleExclamation className="inline text-yellow-500" />
+  {' 本記事は、最終更新日から'}
+  <br />
+  {elapsedYears}
+  {' 年以上が経過しています。'}
+</div>

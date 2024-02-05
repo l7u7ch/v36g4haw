@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+import { SITE_TITLE } from '../consts'
+import defaultHeroImage from '../assets/default-hero-image.png'
+import Layout from '../layouts/Layout.astro'
+import AuthorProfile from '../components/AuthorProfile.astro'
+import Metadata from '../components/Metadata.astro'
+import TableOfContents from '../components/TableOfContents.astro'
+import Warning from '../components/Warning.astro'
+import EditButton from '../components/EditButton.astro'
+import dayjs from 'dayjs'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
+}
+
+const post = Astro.props
+const { Content, headings } = await post.render()
+
+const title = `${Astro.props.data.title} | ${SITE_TITLE}`
+const description = post.body.substring(0, 160)
+const heroImage = (post.data.heroImage as ImageMetadata) || defaultHeroImage
+
+const updatedDate = dayjs(post.data.updatedAt)
+const currentDate = dayjs()
+const elapsedYears = currentDate.diff(updatedDate, 'year')
+---
+
+<Layout title={title} description={description} heroImage={heroImage}>
+  <main class="flex justify-center gap-6">
+    <!-- 1. Article Block -->
+    <article id="article" class="prose w-full max-w-3xl rounded-md bg-slate-800 p-6">
+      <!-- 1.1. Title -->
+      <h1 class="m-0">{post.data.title}</h1>
+      <br />
+      <!-- 1.2. Hero Image -->
+      <Image src={heroImage} alt="heroImage" class="m-0" />
+      <!-- 1.3. Content -->
+      <Content />
+    </article>
+    <!-- 2. Aside Block -->
+    <aside class="hidden w-full max-w-xs lg:inline-block">
+      <!-- 2.1.Profile -->
+      <AuthorProfile />
+      <br />
+      <!-- 2.2. Metadata -->
+      <Metadata publishedAt={post.data.publishedAt} updatedAt={post.data.updatedAt} words={post.body.length} />
+      <br />
+      <div class="sticky top-6">
+        <!-- 2.3. Table Of Contents -->
+        {
+          headings.length > 0 && (
+            <>
+              <TableOfContents headings={headings} />
+              <br />
+            </>
+          )
+        }
+        <!-- 2.4. Warning -->
+        {
+          elapsedYears > 0 && (
+            <>
+              <Warning elapsedYears={elapsedYears} />
+              <br />
+            </>
+          )
+        }
+        <!-- 2.5. Edit Button -->
+        <EditButton id={post.id} />
+        <br />
+      </div>
+    </aside>
+  </main>
+</Layout>

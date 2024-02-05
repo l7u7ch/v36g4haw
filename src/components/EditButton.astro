@@ -1,0 +1,20 @@
+---
+import { FaPencil } from 'react-icons/fa6'
+
+interface Props {
+  id: string
+}
+
+const { id } = Astro.props
+---
+
+<a
+  aria-label="feedback"
+  class="duration600 block rounded-md bg-slate-800 p-6 text-center hover:bg-slate-700"
+  href={`https://github.com/l7u7ch/xenexe/tree/master/content/posts/${id}`}
+  rel="nofollow noopener noreferrer"
+  target="_blank"
+>
+  <FaPencil className="inline" />
+  {' この記事を編集する'}
+</a>

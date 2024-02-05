@@ -1,0 +1,72 @@
+---
+import { FaAnglesLeft, FaAngleLeft, FaAngleRight, FaAnglesRight } from 'react-icons/fa6'
+
+const { page } = Astro.props
+---
+
+<div class="flex justify-center gap-6">
+  <!-- 1. First Page -->
+  {
+    page.url.prev ? (
+      <a
+        href="/"
+        class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 ring-4 ring-slate-800 duration-500 hover:bg-slate-700 hover:ring-slate-700"
+      >
+        <FaAnglesLeft className="inline" />
+      </a>
+    ) : (
+      <span class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 ring-4 ring-slate-800">
+        <FaAnglesLeft className="inline" />
+      </span>
+    )
+  }
+  <!-- 2. Prev Page -->
+  {
+    page.url.prev ? (
+      <a
+        href={page.url.prev}
+        class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 ring-4 ring-slate-800 duration-500 hover:bg-slate-700 hover:ring-slate-700"
+      >
+        <FaAngleLeft className="inline" />
+      </a>
+    ) : (
+      <span class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 ring-4 ring-slate-800">
+        <FaAngleLeft className="inline" />
+      </span>
+    )
+  }
+  <!-- 3. Current Page -->
+  <span class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 ring-4 ring-slate-800">
+    {page.currentPage + '/' + page.lastPage}
+  </span>
+  <!-- 4. Next Page -->
+  {
+    page.url.next ? (
+      <a
+        href={page.url.next}
+        class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 ring-4 ring-slate-800 duration-500 hover:bg-slate-700 hover:ring-slate-700"
+      >
+        <FaAngleRight className="inline" />
+      </a>
+    ) : (
+      <span class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 ring-4 ring-slate-800">
+        <FaAngleRight className="inline" />
+      </span>
+    )
+  }
+  <!-- 5. Last Page -->
+  {
+    page.url.next ? (
+      <a
+        href={`/${page.lastPage}`}
+        class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 ring-4 ring-slate-800 duration-500 hover:bg-slate-700 hover:ring-slate-700"
+      >
+        <FaAnglesRight className="inline" />
+      </a>
+    ) : (
+      <span class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 ring-4 ring-slate-800">
+        <FaAnglesRight className="inline" />
+      </span>
+    )
+  }
+</div>

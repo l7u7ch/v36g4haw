@@ -1,0 +1,28 @@
+---
+import '../styles/global.css'
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+  title: string
+  description: string
+  heroImage: ImageMetadata
+}
+
+const { title, description, heroImage } = Astro.props
+---
+
+<!doctype html>
+<html lang="ja-JP" class="scroll-smooth bg-slate-900 text-gray-300">
+  <head>
+    <BaseHead title={title} , description={description} , heroImage={heroImage} />
+  </head>
+  <body>
+    <Header />
+    <br />
+    <slot />
+    <br />
+    <Footer />
+  </body>
+</html>

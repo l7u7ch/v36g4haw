@@ -1,0 +1,50 @@
+---
+import { FaRotate } from 'react-icons/fa6'
+import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+import dayjs from 'dayjs'
+import defaultHeroImage from '../assets/default-hero-image.png'
+import Layout from '../layouts/Layout.astro'
+import Pagination from '../components/Pagination.astro'
+import type { GetStaticPathsOptions } from 'astro'
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = (await getCollection('blog')).sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf())
+  return paginate(posts, { pageSize: 15 })
+}
+
+const { page } = Astro.props
+const posts = page.data
+---
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION} heroImage={defaultHeroImage}>
+  <>
+    <div class="grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      {
+        posts.map((post) => (
+          <a href={`/${post.slug}/`} class="duration-500 hover:scale-105">
+            {/* 1. ヒーローイメージ */}
+            <Image
+              alt={'heroImage'}
+              class="rounded-t-md"
+              src={(post.data.heroImage as ImageMetadata) || defaultHeroImage}
+            />
+            <div class="rounded-b-md bg-slate-800 p-6">
+              {/* 2. タイトル */}
+              <div>{post.data.title}</div>
+              <br />
+              {/* 3.更新日 */}
+              <div class="flex items-center justify-end">
+                <FaRotate className="inline" />
+                {` ${dayjs(post.data.updatedAt).format(`YYYY-MM-DD`)}`}
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <br />
+    <Pagination page={page} />
+  </>
+</Layout>
