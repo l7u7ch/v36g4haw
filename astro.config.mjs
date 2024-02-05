@@ -36,11 +36,4 @@ export default defineConfig({
   image: {
     service: squooshImageService(),
   },
-
-  // https://docs.astro.build/ja/reference/configuration-reference/#vite
-  vite: {
-    ssr: {
-      noExternal: ['react-icons'],
-    },
-  },
 })
