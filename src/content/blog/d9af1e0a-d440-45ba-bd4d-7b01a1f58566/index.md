@@ -5,16 +5,6 @@ updatedAt: '2020-12-21T10:08:42+0900'
 heroImage: ''
 ---
 
-+++
-slug = "recommended-gui-clients-to-make-working-with-git-easier"
-image = "8a13a2a7c8480acf77d8b7f414070bdd.png"
-title =
-publishDate =
-lastmod =
-keywords = ["Tech", "Git"]
-aliases = ["/c801f9f5894052fbd1531f2fafd4cebc"]
-+++
-
 ## 1. はじめに
 
 Git クライアントは，Git で使用できる機能を制限する代わりに，より直感的な操作を出来るようにしたソフトウェアです。Git の初心者だけではなく，中級者・上級者の人も作業の効率化や操作ミスを減らすために使用することがあります。本記事では，Git の操作を快適にするオススメの GUI クライアントを 3 つ紹介します。
