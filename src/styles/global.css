@@ -52,6 +52,14 @@ ul.contains-task-list > li > input[type='checkbox'] {
   hover:prose-a:text-red-600
   prose-strong:border-b-2
   prose-strong:border-red-600
+  prose-code:rounded-md
+  prose-code:px-2
+  prose-code:py-1
+  prose-code:text-red-600
+  prose-code:ring-2
+  prose-code:ring-slate-700
+  prose-code:before:invisible
+  prose-code:after:invisible
   prose-th:p-6
   prose-td:p-6
   prose-img:mx-auto
