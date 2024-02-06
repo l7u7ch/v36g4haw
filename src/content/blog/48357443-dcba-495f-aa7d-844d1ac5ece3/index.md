@@ -5,16 +5,6 @@ updatedAt: '2020-12-21T02:50:19+0900'
 heroImage: ''
 ---
 
-+++
-slug = "delete-twitter-tweets-periodically-using-google-apps-script"
-image = "14202f8c2a5582219cf162b0bb1b93a4.png"
-title =
-publishDate =
-lastmod =
-keywords = ["Tech", "Google Apps Script"]
-aliases = ["/aff6f0cd316165fe425ae87f4b34bbd5"]
-+++
-
 ## 1. はじめに
 
 近年，[Snapchat](https://www.snapchat.com/) や [Instagram Stories](https://business.instagram.com/blog/introducing-instagram-stories) などの一定時間が経過すると自動的に投稿が削除される，エフェメラル SNS と呼ばれるサービスが登場しています。
