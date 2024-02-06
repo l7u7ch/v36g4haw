@@ -5,15 +5,6 @@ updatedAt: '2021-02-13T15:18:56+0900'
 heroImage: ''
 ---
 
-+++
-slug = "make-existing-hugo-theme-compatible-with-netlify-cms"
-image = "6700147bc7118c36b8a459ad3139af0a.png"
-title =
-publishDate =
-lastmod =
-keywords = ["Tech", "Hugo", "Netlify CMS"]
-+++
-
 ## 1. はじめに
 
 [Netlify CMS](https://www.netlifycms.org/) は，Netlify 社が提供する Headless CMS です。Netlify CMS を用いることで，Gatsby や Hugo などの静的サイトジェネレーターを WordPress ような CMS で運用することが出来ます。本記事では，Netlify CMS の[ドキュメント](https://www.netlifycms.org/docs/hugo/)に従って，既存の Hugo テーマを Netlify CMS に対応させる手順を記述します。
