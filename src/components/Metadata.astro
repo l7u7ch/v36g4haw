@@ -11,39 +11,36 @@ interface Props {
 const { publishedAt = new Date(), updatedAt = new Date(), words = 0 } = Astro.props
 ---
 
-<div class="rounded-md bg-slate-800">
+<div class="rounded-md bg-slate-800 py-3">
   <!-- 1. 投稿日 -->
-  <div class="flex justify-between p-6">
+  <div class="flex justify-between px-6 py-3">
     <span>
       <FaCalendarDays className="inline" />
       {' 投稿日'}
     </span>
     {dayjs(publishedAt).format(`YYYY-MM-DD`)}
   </div>
-  <hr class="border-t-2 border-slate-700" />
 
   <!-- 2. 更新日 -->
-  <div class="flex justify-between p-6">
+  <div class="flex justify-between px-6 py-3">
     <span>
       <FaRotate className="inline" />
       {' 更新日'}
     </span>
     {dayjs(updatedAt).format(`YYYY-MM-DD`)}
   </div>
-  <hr class="border-t-2 border-slate-700" />
 
   <!-- 3. 文字数 -->
-  <div class="flex justify-between p-6">
+  <div class="flex justify-between px-6 py-3">
     <span>
       <FaFileLines className="inline" />
       {' 文字数'}
     </span>
     {`${words} 文字`}
   </div>
-  <hr class="border-t-2 border-slate-700" />
 
   <!-- 4. 読了時間 -->
-  <div class="flex justify-between p-6">
+  <div class="flex justify-between px-6 py-3">
     <span>
       <FaBookOpen className="inline" />
       {' 読了時間'}
