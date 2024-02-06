@@ -36,7 +36,7 @@ ul.contains-task-list > li > input[type='checkbox'] {
  * Scrollspy
  */
 .active {
-  @apply rounded-md bg-sky-900;
+  @apply bg-sky-900;
 }
 
 /* 
