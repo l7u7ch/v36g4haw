@@ -59,8 +59,15 @@ ul.contains-task-list > li > input[type='checkbox'] {
   prose-code:text-orange-400
   prose-code:before:invisible
   prose-code:after:invisible
-  prose-th:p-6
-  prose-td:p-6
+  prose-table:overflow-hidden
+  prose-table:rounded-md
+  prose-th:border-2
+  prose-th:border-slate-700
+  prose-th:bg-slate-700
+  prose-th:p-3
+  prose-td:border-2
+  prose-td:border-slate-700
+  prose-td:p-3
   prose-img:mx-auto
   prose-img:rounded-md;
 }
