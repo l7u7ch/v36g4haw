@@ -2,7 +2,7 @@
 title: 'Tailwind CSS をインストールする'
 publishedAt: '2020-12-24T06:10:57+0900'
 updatedAt: '2020-12-24T06:10:57+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

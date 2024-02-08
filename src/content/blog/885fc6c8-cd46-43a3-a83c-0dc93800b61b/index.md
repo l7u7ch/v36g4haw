@@ -2,7 +2,7 @@
 title: '既存の Hugo テーマを Netlify CMS に対応させる'
 publishedAt: '2021-02-13T15:18:56+0900'
 updatedAt: '2021-02-13T15:18:56+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

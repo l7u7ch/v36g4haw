@@ -2,7 +2,7 @@
 title: 'ブログフレームワークとして WordPress と Hugo を比較・評価する'
 publishedAt: '2020-01-12T02:47:00+09:00'
 updatedAt: '2020-04-20T12:47:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'Web サイトにおける広告ブロック検知のベストプラクティス'
 publishedAt: '2020-03-12T08:21:00+0900'
 updatedAt: '2021-03-02T05:06:00+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

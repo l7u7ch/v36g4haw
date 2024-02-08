@@ -2,7 +2,7 @@
 title: 'Tailwind CSS のカラーパレットをカスタマイズする'
 publishedAt: '2021-01-05T15:28:40+0900'
 updatedAt: '2021-01-05T15:28:40+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

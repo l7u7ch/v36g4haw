@@ -2,7 +2,7 @@
 title: 'Google Apps Script を用いて定期的に Twitter のツイートを削除する'
 publishedAt: '2019-06-06T00:00:00+0900'
 updatedAt: '2020-12-21T02:50:19+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'Ryzen 5 3500 + B450M Pro4 + GTX 1650 で組むゲーミング PC レシピ'
 publishedAt: '2020-09-21T08:15:24+09:00'
 updatedAt: '2020-12-16T22:23:19+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

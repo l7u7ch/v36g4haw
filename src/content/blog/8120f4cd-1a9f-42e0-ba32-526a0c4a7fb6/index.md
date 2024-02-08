@@ -2,7 +2,7 @@
 title: 'ビジネスや仕事で成功したい人にオススメのライフハック'
 publishedAt: '2019-07-06T00:00:00+0900'
 updatedAt: '2020-12-21T21:34:41+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

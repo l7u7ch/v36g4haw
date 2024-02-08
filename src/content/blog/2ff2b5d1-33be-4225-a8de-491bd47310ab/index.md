@@ -2,7 +2,7 @@
 title: 'ライフログを取り続けて感じたメリット・デメリット'
 publishedAt: '2020-05-23T21:22:00+09:00'
 updatedAt: '2020-05-23T21:22:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

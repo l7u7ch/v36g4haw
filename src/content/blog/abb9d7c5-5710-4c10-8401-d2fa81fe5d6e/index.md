@@ -2,7 +2,7 @@
 title: 'UWP 版の Inkscape の設定を初期化する'
 publishedAt: '2019-09-05T00:00:00+0900'
 updatedAt: '2020-12-21T04:45:37+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

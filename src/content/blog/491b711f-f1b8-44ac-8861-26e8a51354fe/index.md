@@ -2,7 +2,7 @@
 title: 'BlockAdBlock を用いて広告ブロックを検知する'
 publishedAt: '2020-03-08T22:31:00+0900'
 updatedAt: '2020-12-21T22:32:28+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

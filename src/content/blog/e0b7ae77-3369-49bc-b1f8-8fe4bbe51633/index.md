@@ -2,7 +2,7 @@
 title: 'GatsbyJS (React) を用いて生成した静的サイト上で UIkit が動作しない問題を解決する'
 publishedAt: '2019-10-31T05:00:00+0900'
 updatedAt: '2020-12-21T08:07:52+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'Web サイトにおける目次 (Table of contents) のベストプラクティス'
 publishedAt: '2020-02-23T01:35:00+0900'
 updatedAt: '2021-03-02T05:05:00+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'アカウントを安全に管理するのにオススメな ID・パスワード管理ツール'
 publishedAt: '2020-01-12T05:45:00+0900'
 updatedAt: '2020-12-22T02:45:21+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

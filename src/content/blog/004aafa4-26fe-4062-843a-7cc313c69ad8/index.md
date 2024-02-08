@@ -2,7 +2,7 @@
 title: 'Tailwind CSS の学習と開発を支援するサイトとツール'
 publishedAt: '2020-12-18T02:08:46+0900'
 updatedAt: '2020-12-18T02:08:46+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

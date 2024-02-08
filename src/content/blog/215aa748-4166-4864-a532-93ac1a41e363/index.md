@@ -2,7 +2,7 @@
 title: 'Python 3 を用いて Algolia の Index を取得する'
 publishedAt: '2020-03-15T17:35:00+0900'
 updatedAt: '2020-12-15T14:39:55+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'Tailwind CSS でフォームをカスタマイズする'
 publishedAt: '2020-12-28T15:04:02+0900'
 updatedAt: '2020-12-28T15:04:02+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

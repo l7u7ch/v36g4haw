@@ -2,7 +2,7 @@
 title: 'PDFMtEd を用いて Linux で PDF のメタデータを編集する'
 publishedAt: '2019-09-03T00:00:00+0900'
 updatedAt: '2020-12-21T21:50:24+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

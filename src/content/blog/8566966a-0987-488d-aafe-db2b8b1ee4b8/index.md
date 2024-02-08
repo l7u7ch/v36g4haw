@@ -2,7 +2,7 @@
 title: 'Windows 10 の設定項目と ms-settings の対応表'
 publishedAt: '2019-04-18T00:00:00+0900'
 updatedAt: '2020-12-21T04:02:50+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'メイン OS を Windows から Linux にするメリット・デメリット'
 publishedAt: '2020-01-12T00:41:40+09:00'
 updatedAt: '2020-01-12T00:41:40+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

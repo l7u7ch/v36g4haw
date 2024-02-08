@@ -2,7 +2,7 @@
 title: 'Tailwind CSS に Prefix を追加する'
 publishedAt: '2020-12-28T16:55:30+0900'
 updatedAt: '2020-12-28T16:55:30+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

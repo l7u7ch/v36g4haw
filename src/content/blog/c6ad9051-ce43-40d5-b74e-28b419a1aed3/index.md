@@ -2,7 +2,7 @@
 title: 'オンラインのミーティングや飲み会を快適にするオススメのビデオ通話ツール'
 publishedAt: '2020-04-20T17:03:00+0900'
 updatedAt: '2020-12-22T03:45:08+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

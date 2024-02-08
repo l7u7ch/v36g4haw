@@ -2,7 +2,7 @@
 title: 'Python 3 + OpenCV を用いて動画の長さを取得する'
 publishedAt: '2018-02-06T00:00:00+0900'
 updatedAt: '2020-12-22T06:52:15+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

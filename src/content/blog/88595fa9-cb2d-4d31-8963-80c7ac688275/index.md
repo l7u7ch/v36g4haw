@@ -2,7 +2,7 @@
 title: 'Linux のデスクトップ環境として Budgie Desktop を愛用していた理由'
 publishedAt: '2019-02-28T00:00:00+09:00'
 updatedAt: '2020-05-29T08:53:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

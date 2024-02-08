@@ -2,7 +2,7 @@
 title: 'Antergos (Arch Linux) に日本語入力環境を構築する'
 publishedAt: '2018-01-01T00:00:00+09:00'
 updatedAt: '2018-12-19T00:00:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. 概要

@@ -2,7 +2,7 @@
 title: 'Vanilla JS と Lodash で連想配列を GROUP BY + SUM する'
 publishedAt: '2020-07-09T03:58:24+0900'
 updatedAt: '2020-12-15T14:43:33+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

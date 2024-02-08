@@ -2,7 +2,7 @@
 title: 'Create React App で生成される React アプリを最小構成にする'
 publishedAt: '2020-12-05T07:11:00+0900'
 updatedAt: '2020-12-15T14:47:53+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

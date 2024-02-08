@@ -2,7 +2,7 @@
 title: 'Git の操作を快適にするオススメの GUI クライアント'
 publishedAt: '2019-10-28T17:21:00+0900'
 updatedAt: '2020-12-21T10:08:42+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'Python 3 で ROT13 (シーザ暗号) を実装する'
 publishedAt: '2018-01-01T00:00:00+0900'
 updatedAt: '2020-12-21T04:25:35+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

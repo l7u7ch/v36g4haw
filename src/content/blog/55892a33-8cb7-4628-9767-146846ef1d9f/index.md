@@ -2,7 +2,7 @@
 title: 'Hugo に Tailwind CSS をインストールする'
 publishedAt: '2021-01-24T14:37:18+0900'
 updatedAt: '2021-01-24T14:37:18+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

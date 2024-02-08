@@ -2,7 +2,7 @@
 title: 'Algolia のフロントエンドをリアルタイム検索から任意検索に切り替える'
 publishedAt: '2020-04-07T03:17:00+0900'
 updatedAt: '2020-12-15T14:42:37+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

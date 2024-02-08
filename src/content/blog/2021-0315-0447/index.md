@@ -2,7 +2,7 @@
 title: 'Genymotion で一部のゲームがインストール出来ない問題を解決する'
 publishedAt: '2021-03-15T04:47:25+0900'
 updatedAt: '2021-03-15T04:47:25+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

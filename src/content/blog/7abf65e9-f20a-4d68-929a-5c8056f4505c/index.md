@@ -2,7 +2,7 @@
 title: 'Algolia が提供している動作検証機能の『UI Demos』を構築する'
 publishedAt: '2020-03-15T14:58:00+0900'
 updatedAt: '2020-12-15T14:38:47+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

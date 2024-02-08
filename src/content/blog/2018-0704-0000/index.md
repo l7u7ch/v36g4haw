@@ -2,7 +2,7 @@
 title: 'ASUSTOR NAS のアプリをマニュアルでダウングレードする'
 publishedAt: '2018-07-04T00:00:00+0900'
 updatedAt: '2020-12-21T02:40:00+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

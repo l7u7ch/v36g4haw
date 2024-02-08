@@ -2,7 +2,7 @@
 title: 'Trello から Notion に完全移行できない理由'
 publishedAt: '2020-02-07T22:40:00+09:00'
 updatedAt: '2020-02-07T22:40:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

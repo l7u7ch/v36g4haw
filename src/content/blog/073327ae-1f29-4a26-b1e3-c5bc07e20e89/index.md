@@ -2,7 +2,7 @@
 title: '電子情報処理学会に関連する論文・催事まとめ'
 publishedAt: '2020-03-08T07:31:00+0900'
 updatedAt: '2021-03-02T04:56:00+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

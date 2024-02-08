@@ -2,7 +2,7 @@
 title: 'システムエンジニアやプログラマーにおける『ポートフォリオ』と『作品』'
 publishedAt: '2020-05-11T14:56:00+09:00'
 updatedAt: '2020-05-11T14:56:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

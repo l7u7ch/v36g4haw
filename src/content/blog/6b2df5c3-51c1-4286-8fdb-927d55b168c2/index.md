@@ -2,7 +2,7 @@
 title: 'curl を用いて pixiv API を呼び出す'
 publishedAt: '2018-12-05T00:00:00+0900'
 updatedAt: '2020-12-15T14:27:21+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

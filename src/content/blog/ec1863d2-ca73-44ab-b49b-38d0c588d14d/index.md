@@ -2,7 +2,7 @@
 title: '技術系のブログ記事を執筆する際に注意しているポイント'
 publishedAt: '2020-01-27T17:38:00+09:00'
 updatedAt: '2020-01-27T17:38:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

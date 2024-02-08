@@ -2,7 +2,7 @@
 title: 'React アプリを Electron でデスクトップアプリ化する'
 publishedAt: '2020-12-13T13:11:55+0900'
 updatedAt: '2020-12-15T14:50:43+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

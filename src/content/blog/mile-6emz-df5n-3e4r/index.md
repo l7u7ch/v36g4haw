@@ -2,7 +2,7 @@
 title: 'Recharts の X 軸に日時を表示させる'
 publishedAt: '2020-07-09T21:47:50+0900'
 updatedAt: '2020-12-15T14:45:26+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

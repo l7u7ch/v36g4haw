@@ -2,7 +2,7 @@
 title: 'badblocks のテスト結果に含まれるエラーの詳細'
 publishedAt: '2019-05-28T00:00:00+0900'
 updatedAt: '2020-12-21T03:43:14+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

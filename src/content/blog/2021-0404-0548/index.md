@@ -2,7 +2,7 @@
 title: 'JAIST の 5D プログラムに関する中間報告書'
 publishedAt: '2021-04-04T05:48:08+0900'
 updatedAt: '2021-04-06T16:11:15+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

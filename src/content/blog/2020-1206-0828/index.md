@@ -2,7 +2,7 @@
 title: 'Vanilla JS と Lodash で連想配列を累計する'
 publishedAt: '2020-12-06T08:28:39+0900'
 updatedAt: '2020-12-15T14:49:35+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

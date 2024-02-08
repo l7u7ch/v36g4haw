@@ -2,7 +2,7 @@
 title: 'Algolia の InstantSearch.js を用いて URL ルーティングを実装する'
 publishedAt: '2020-03-30T14:42:00+0900'
 updatedAt: '2020-12-15T14:41:35+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

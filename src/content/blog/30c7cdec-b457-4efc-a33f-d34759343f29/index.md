@@ -2,7 +2,7 @@
 title: 'Zorin OS Core を愛用する理由'
 publishedAt: '2020-03-10T21:29:00+09:00'
 updatedAt: '2020-03-10T21:29:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

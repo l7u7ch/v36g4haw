@@ -2,7 +2,7 @@
 title: '個人ブログに最適なオススメの Hugo テーマ'
 publishedAt: '2020-02-20T18:57:00+0900'
 updatedAt: '2020-12-21T11:06:09+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

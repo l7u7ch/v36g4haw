@@ -2,7 +2,7 @@
 title: 'Netlify 上で Tailwind CSS をビルドする'
 publishedAt: '2021-02-03T21:31:44+0900'
 updatedAt: '2021-02-03T21:31:44+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

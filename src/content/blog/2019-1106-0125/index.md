@@ -2,7 +2,7 @@
 title: 'ImageMagick の convert コマンドを用いて画像と PDF を双方向変換する'
 publishedAt: '2019-11-06T01:25:54+0900'
 updatedAt: '2020-12-21T05:42:46+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

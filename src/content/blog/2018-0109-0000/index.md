@@ -2,7 +2,7 @@
 title: 'Anki 上で AwesomeTTS を用いて Text to Speech を実装する'
 publishedAt: '2018-01-09T00:00:00+0900'
 updatedAt: '2021-02-28T15:05:25+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

@@ -2,7 +2,7 @@
 title: 'ファイル名をハッシュ値にリネームする CLI を開発する'
 publishedAt: '2019-10-20T00:00:00+0900'
 updatedAt: '2020-12-21T05:58:04+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

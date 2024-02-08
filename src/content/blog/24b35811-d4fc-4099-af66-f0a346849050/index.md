@@ -2,7 +2,7 @@
 title: 'ブログフレームワークとして GatsbyJS と Hugo を比較・評価する'
 publishedAt: '2020-02-25T01:51:42+09:00'
 updatedAt: '2020-02-25T01:51:42+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

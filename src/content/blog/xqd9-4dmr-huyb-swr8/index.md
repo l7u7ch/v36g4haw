@@ -2,7 +2,7 @@
 title: '自分の学習スタイルに合った技術書の見極め方'
 publishedAt: '2018-02-14T00:00:00+09:00'
 updatedAt: '2018-02-14T00:00:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. 概要

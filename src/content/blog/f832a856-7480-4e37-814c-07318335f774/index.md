@@ -2,7 +2,7 @@
 title: 'Hugo でセクションツリーリストを実装する'
 publishedAt: '2021-01-11T01:24:33+0900'
 updatedAt: '2021-01-11T01:24:33+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

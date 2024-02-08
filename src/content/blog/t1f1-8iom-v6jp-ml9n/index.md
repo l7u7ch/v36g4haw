@@ -2,7 +2,7 @@
 title: 'Zotero 5 を Ubuntu 18.04 LTS にインストールする'
 publishedAt: '2020-01-03T01:14:00+0900'
 updatedAt: '2020-12-21T01:55:27+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

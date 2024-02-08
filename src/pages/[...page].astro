@@ -25,11 +25,7 @@ const posts = page.data
         posts.map((post) => (
           <a href={`/${post.slug}/`} class="duration-500 hover:scale-105">
             {/* 1. ヒーローイメージ */}
-            <Image
-              alt={'heroImage'}
-              class="rounded-t-md"
-              src={(post.data.heroImage as ImageMetadata) || defaultHeroImage}
-            />
+            <Image src={post.data.heroImage} alt={'heroImage'} class="rounded-t-md" />
             <div class="rounded-b-md bg-slate-800 p-6">
               {/* 2. タイトル */}
               <div>{post.data.title}</div>

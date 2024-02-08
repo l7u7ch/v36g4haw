@@ -2,7 +2,7 @@
 title: 'Hugo + Tailwind CSS + Alpine.js + Netlify CMS を用いた JAMStack なブログサイトの開発後記'
 publishedAt: '2020-12-03T20:54:49+0900'
 updatedAt: '2020-12-16T22:24:19+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

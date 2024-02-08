@@ -25,14 +25,13 @@ const { Content, headings } = await post.render()
 
 const title = `${Astro.props.data.title} | ${SITE_TITLE}`
 const description = post.body.substring(0, 160)
-const heroImage = (post.data.heroImage as ImageMetadata) || defaultHeroImage
 
 const updatedDate = dayjs(post.data.updatedAt)
 const currentDate = dayjs()
 const elapsedYears = currentDate.diff(updatedDate, 'year')
 ---
 
-<Layout title={title} description={description} heroImage={heroImage}>
+<Layout title={title} description={description} heroImage={post.data.heroImage}>
   <main class="flex justify-center gap-6">
     <!-- 1. Article Block -->
     <article id="article" class="prose w-full max-w-3xl rounded-md bg-slate-800 p-6">
@@ -40,7 +39,7 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
       <h1 class="m-0">{post.data.title}</h1>
       <br />
       <!-- 1.2. Hero Image -->
-      <Image src={heroImage} alt="heroImage" class="m-0" />
+      <Image src={post.data.heroImage} alt="heroImage" class="m-0" />
       <!-- 1.3. Content -->
       <Content />
     </article>

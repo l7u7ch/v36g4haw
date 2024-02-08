@@ -2,7 +2,7 @@
 title: 'Hugo で擬似的な無限スクロールを実装する'
 publishedAt: '2019-10-23T11:39:00+0900'
 updatedAt: '2020-12-22T00:13:24+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

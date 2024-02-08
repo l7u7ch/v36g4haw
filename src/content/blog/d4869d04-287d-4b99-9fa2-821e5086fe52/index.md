@@ -2,7 +2,7 @@
 title: 'Google Apps Script を用いて Toggl のデータを Google カレンダーに移行する'
 publishedAt: '2020-02-25T21:06:00+0900'
 updatedAt: '2020-12-21T21:39:46+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

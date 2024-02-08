@@ -2,7 +2,7 @@
 title: 'CppUnit を Ubuntu 18.04 LTS にインストールする'
 publishedAt: '2020-01-10T00:37:00+0900'
 updatedAt: '2020-12-15T14:33:22+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

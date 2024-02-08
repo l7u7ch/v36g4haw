@@ -2,7 +2,7 @@
 title: 'エレガントで美しいオススメの Linux デスクトップ環境'
 publishedAt: '2020-04-20T18:10:00+0900'
 updatedAt: '2020-12-22T05:50:05+0900'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに

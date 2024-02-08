@@ -2,7 +2,7 @@
 title: 'Scalafmt を sbt のプラグインとしてインストール・実行する方法'
 publishedAt: '2019-05-16T00:00:00+09:00'
 updatedAt: '2019-05-16T00:00:00+09:00'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 
 ## 1. はじめに
