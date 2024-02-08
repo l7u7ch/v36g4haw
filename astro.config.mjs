@@ -1,4 +1,4 @@
-import { defineConfig, squooshImageService } from 'astro/config'
+import { defineConfig } from 'astro/config'
 import expressiveCode from 'astro-expressive-code'
 import react from '@astrojs/react'
 import rehypeExternalLinks from 'rehype-external-links'
@@ -31,10 +31,5 @@ export default defineConfig({
       ],
     ],
     remarkPlugins: [remarkBreaks],
-  },
-
-  // https://docs.astro.build/ja/guides/images/
-  image: {
-    service: squooshImageService(),
   },
 })
