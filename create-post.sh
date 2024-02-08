@@ -9,6 +9,6 @@ cat << EOF > "${folder_path}/index.md"
 title: 'UNTITLE'
 publishedAt: '$current_datetime'
 updatedAt: '$current_datetime'
-heroImage: ''
+heroImage: '/src/assets/default-hero-image.png'
 ---
 EOF
