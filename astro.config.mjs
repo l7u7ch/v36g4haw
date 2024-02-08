@@ -18,6 +18,7 @@ export default defineConfig({
   markdown: {
     remarkRehype: {
       footnoteLabel: ' ',
+      footnoteLabelProperties: { className: [''] },
       footnoteLabelTagName: 'hr',
     },
     rehypePlugins: [
