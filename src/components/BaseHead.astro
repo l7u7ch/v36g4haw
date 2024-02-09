@@ -45,6 +45,18 @@ const { title, description, heroImage } = Astro.props
 <!-- Sitemap -->
 <link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site)} />
 
+<!-- Google Analytics -->
+<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-C2D1SC3BE5"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+
+  gtag('config', 'G-C2D1SC3BE5')
+</script>
+
 <!-- Google AdSense -->
 <script
   async
