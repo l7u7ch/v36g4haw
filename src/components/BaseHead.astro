@@ -42,7 +42,7 @@ const { title, description, heroImage } = Astro.props
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(heroImage.src, Astro.url)} />
 
-<!-- Sitemap / https://docs.astro.build/ja/guides/integrations-guide/sitemap/#usage -->
+<!-- Sitemap -->
 <link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site)} />
 
 <!-- Google AdSense -->
