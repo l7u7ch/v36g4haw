@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import expressiveCode from 'astro-expressive-code'
+import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import rehypeExternalLinks from 'rehype-external-links'
 import remarkBreaks from 'remark-breaks'
@@ -12,7 +13,17 @@ export default defineConfig({
   site: 'https://xenexe.info/',
 
   // https://docs.astro.build/ja/guides/integrations-guide/
-  integrations: [expressiveCode(), react(), sitemap(), tailwind()],
+  integrations: [
+    expressiveCode(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+    react(),
+    sitemap(),
+    tailwind(),
+  ],
 
   // https://docs.astro.build/ja/guides/markdown-content/
   markdown: {
