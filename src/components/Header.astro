@@ -1,5 +1,19 @@
 ---
+import { FaRss } from 'react-icons/fa6'
 import { SITE_TITLE } from '../consts'
 ---
 
-<header class="bg-slate-800 p-6"><a href="/">{SITE_TITLE}</a></header>
+<header class="bg-slate-800 p-4">
+  <div class="flex items-center justify-between">
+    <a href="/">{SITE_TITLE}</a>
+    <a
+      aria-label="rss"
+      class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 duration-500 hover:bg-slate-600"
+      href="/rss.xml"
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+    >
+      <FaRss />
+    </a>
+  </div>
+</header>
