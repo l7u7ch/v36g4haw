@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import expressiveCode from 'astro-expressive-code'
+import mdx from '@astrojs/mdx'
 import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import rehypeExternalLinks from 'rehype-external-links'
@@ -15,6 +16,7 @@ export default defineConfig({
   // https://docs.astro.build/ja/guides/integrations-guide/
   integrations: [
     expressiveCode(),
+    mdx(),
     partytown({
       config: {
         forward: ['dataLayer.push'],
