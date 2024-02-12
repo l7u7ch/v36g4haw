@@ -31,9 +31,9 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
 ---
 
 <Layout title={title} description={description} heroImage={post.data.heroImage}>
-  <main class="flex justify-center gap-6">
+  <main class="justify-center gap-6 lg:flex">
     <!-- 1. Article Block -->
-    <article id="article" class="prose w-full max-w-3xl rounded-md bg-slate-800 p-6">
+    <article id="article" class="prose max-w-full rounded-md bg-slate-800 p-6 lg:max-w-3xl">
       <!-- 1.1. Title -->
       <h1 class="m-0">{post.data.title}</h1>
       <br />
@@ -42,8 +42,9 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
       <!-- 1.3. Content -->
       <Content />
     </article>
+    <br class="lg:hidden" />
     <!-- 2. Aside Block -->
-    <aside class="hidden w-full max-w-xs lg:inline-block">
+    <aside class="max-w-full lg:max-w-xs">
       <!-- 2.1.Profile -->
       <AuthorProfile />
       <br />
@@ -74,7 +75,6 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
         <br />
         <!-- 2.6. Related Posts -->
         <RelatedPosts />
-        <br />
       </div>
     </aside>
   </main>
