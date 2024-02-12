@@ -7,8 +7,8 @@ import AuthorProfile from '../components/AuthorProfile.astro'
 import Metadata from '../components/Metadata.astro'
 import TableOfContents from '../components/TableOfContents.astro'
 import Warning from '../components/Warning.astro'
+import Contribution from '../components/Contribution.astro'
 import RelatedPosts from '../components/RelatedPosts.astro'
-import EditButton from '../components/EditButton.astro'
 import dayjs from 'dayjs'
 
 export async function getStaticPaths() {
@@ -69,11 +69,11 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
             </>
           )
         }
-        <!-- 2.5. Related Posts -->
-        <RelatedPosts />
+        <!-- 2.5. Contribution -->
+        <Contribution id={post.id} />
         <br />
-        <!-- 2.6. Edit Button -->
-        <EditButton id={post.id} />
+        <!-- 2.6. Related Posts -->
+        <RelatedPosts />
         <br />
       </div>
     </aside>
