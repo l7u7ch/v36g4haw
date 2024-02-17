@@ -20,6 +20,7 @@
     "astro": "^4.3.5",
     "astro-expressive-code": "^0.32.4",
     "dayjs": "^1.11.10",
+    "natural": "^6.10.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",

@@ -74,7 +74,7 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
         <Contribution id={post.id} />
         <br />
         <!-- 2.6. Related Posts -->
-        <RelatedPosts />
+        <RelatedPosts title={post.data.title} />
       </div>
     </aside>
   </main>
