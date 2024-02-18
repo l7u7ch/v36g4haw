@@ -1,5 +1,5 @@
 ---
-title: '2024 年のパソコン環境：Parsec + Proxmox VE を中心としたシステム構成'
+title: 'Parsec と Proxmox VE を中心としたリモートデスクトップ環境'
 publishedAt: '2024-02-15 11:34'
 updatedAt: '2024-02-15 11:34'
 heroImage: './B9F8743D0606F1458D049F7E2119269E.webp'
