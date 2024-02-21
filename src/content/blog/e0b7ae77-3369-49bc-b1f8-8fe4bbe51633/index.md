@@ -16,11 +16,11 @@ heroImage: '/src/assets/default-hero-image.png'
 
 ## 2. 環境構築
 
-本記事では，実験環境として公式テーマの [gatsby-starter-default](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/) を使用します。公式サイトに記述されているインストール方法に従って任意の場所にインストールした後，_gatsby-starter-default/src/pages/index.js_ を以下のように書き換えます。
+本記事では，実験環境として公式テーマの [gatsby-starter-default](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/) を使用します。公式サイトに記述されているインストール方法に従って任意の場所にインストールした後，`gatsby-starter-default/src/pages/index.js` を以下のように書き換えます。
 
-```HTML
-import React from "react"
-import Helmet from "react-helmet"
+```jsx title="gatsby-starter-default/src/pages/index.js"
+import React from 'react'
+import Helmet from 'react-helmet'
 
 const IndexPage = () => (
   <div>
@@ -29,15 +29,15 @@ const IndexPage = () => (
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
     </Helmet>
-    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div className="uk-child-width-expand@s uk-text-center" uk-grid>
       <div>
-        <div class="uk-card uk-card-secondary uk-card-body">Item</div>
+        <div className="uk-card uk-card-secondary uk-card-body">Item</div>
       </div>
       <div>
-        <div class="uk-card uk-card-secondary uk-card-body">Item</div>
+        <div className="uk-card uk-card-secondary uk-card-body">Item</div>
       </div>
       <div>
-        <div class="uk-card uk-card-secondary uk-card-body">Item</div>
+        <div className="uk-card uk-card-secondary uk-card-body">Item</div>
       </div>
     </div>
   </div>
@@ -60,10 +60,32 @@ Chrome DevTools を用いてデバックすると以下のようなエラーが�
 
 上記のエラーを解決するために，11 行目を以下のように書き換えます。
 
-```HTML
-<div className="uk-child-width-expand@s uk-text-center" uk-grid>
-　　　　　　　　　　　　　　　　↓
-<div className="uk-child-width-expand@s uk-text-center" uk-grid="true">
+```jsx ins="="true""
+import React from 'react'
+import Helmet from 'react-helmet'
+
+const IndexPage = () => (
+  <div>
+    <Helmet>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+    </Helmet>
+    <div className="uk-child-width-expand@s uk-text-center" uk-grid="true">
+      <div>
+        <div className="uk-card uk-card-secondary uk-card-body">Item</div>
+      </div>
+      <div>
+        <div className="uk-card uk-card-secondary uk-card-body">Item</div>
+      </div>
+      <div>
+        <div className="uk-card uk-card-secondary uk-card-body">Item</div>
+      </div>
+    </div>
+  </div>
+)
+
+export default IndexPage
 ```
 
 修正したソースコードを実行した結果を以下に示します。すると，正常に 3 行 1 列で表示されていることが確認できました。
