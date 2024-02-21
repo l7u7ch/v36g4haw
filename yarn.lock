@@ -551,6 +551,14 @@
     "@expressive-code/core" "^0.33.2"
     hastscript "^7.2.0"
 
+"@expressive-code/plugin-line-numbers@^0.33.2":
+  version "0.33.2"
+  resolved "https://registry.yarnpkg.com/@expressive-code/plugin-line-numbers/-/plugin-line-numbers-0.33.2.tgz#e00d19077957c7cb1ac996588ea91bcb83989632"
+  integrity sha512-glNhZ+DYLpiygADFoBRhe5+vPEiAWYQniPDgxvZb25nkPKMabtZlTwIjmljNHps35qn30jSvrF/SnhhWwaitvw==
+  dependencies:
+    "@expressive-code/core" "^0.33.2"
+    hastscript "^7.2.0"
+
 "@expressive-code/plugin-shiki@^0.33.2":
   version "0.33.2"
   resolved "https://registry.yarnpkg.com/@expressive-code/plugin-shiki/-/plugin-shiki-0.33.2.tgz#a0fedaede0dd1190abe005c3af29747a98568ae8"
