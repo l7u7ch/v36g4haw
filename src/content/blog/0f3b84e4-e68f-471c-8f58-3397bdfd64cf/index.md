@@ -13,33 +13,27 @@ heroImage: '/src/assets/default-hero-image.png'
 
 以下に，Bootstrap と UIkit のグリッドシステムを実装したソースコードを示します。Bootstrap は，それぞれのカラムでレイアウトを設定してやらないといけませんが，UIkit は全てのカラムに同一の設定を適用することができます。[ネット記事](https://www.ivysoho.net/article.php/uikit-fan-7)に記述されているように，合理的かつ直感的な HTML 記述をすることができます。
 
-```HTML
+```html
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
+    <div class="col-sm">One of three columns</div>
+    <div class="col-sm">One of three columns</div>
+    <div class="col-sm">One of three columns</div>
   </div>
 </div>
 ```
 
-```HTML
+```html
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">Item</div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">Item</div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">Item</div>
-    </div>
+  <div>
+    <div class="uk-card uk-card-default uk-card-body">Item</div>
+  </div>
+  <div>
+    <div class="uk-card uk-card-default uk-card-body">Item</div>
+  </div>
+  <div>
+    <div class="uk-card uk-card-default uk-card-body">Item</div>
+  </div>
 </div>
 ```
 
