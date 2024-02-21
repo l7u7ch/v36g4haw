@@ -16,7 +16,7 @@ heroImage: '/src/assets/default-hero-image.png'
 
 公開されているソースコードに手を加えたものを以下に示します。一般的な無限ページングは，JavaScript を用いて DOM を操作することで実現しています。しかし，公開されているソースコードは Hugo に標準搭載されているページネーションの機能を応用して擬似的な無限ページングを実現しています。
 
-```HTML {linenos=table}
+```go
 {{ $paginator := .Paginate .Pages }}
 {{ $pageSize := $paginator.PageSize }}
 {{ $totalPostsToShow := mul $paginator.PageNumber $pageSize }}
@@ -72,7 +72,7 @@ $ tree
 
 上記で作成した _section.html_ を以下のソースコードに書き換えます。
 
-```html
+```go
 <!doctype html>
 <html lang="en">
   <head>
