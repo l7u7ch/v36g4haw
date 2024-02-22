@@ -34,7 +34,7 @@ const relatedPosts = tfidf
   {
     relatedPosts.map((post) => (
       <a href={`/${post.slug}/`} class="flex gap-3 px-6 py-3 duration-500 hover:bg-slate-700">
-        <Image src={post.data.heroImage || heroImage} alt="" class="w-1/3 rounded-md object-cover" />
+        <Image src={post.data.heroImage || heroImage} alt="heroImage" class="w-1/3 rounded-md object-cover" />
         <div class="truncate">
           <div class="mb-3 truncate">{post.data.title}</div>
           <div class="flex items-center justify-end">
