@@ -1,5 +1,5 @@
 ---
-title: '【Notion】締め切りをわかりやすく可視化する数式 2.0【タスク管理】'
+title: '【Notion】 締め切りをわかりやすく可視化する数式 2.0 【タスク管理】'
 publishedAt: '2024-01-18 17:44'
 updatedAt: '2024-01-18 17:44'
 heroImage: './338fbf75.png'
