@@ -1,0 +1,150 @@
+---
+title: 'Scala で時間 (日付 + 時刻 + オフセット + タイムゾーン) を扱う'
+publishedAt: '2024-02-28 01:31'
+updatedAt: '2024-02-28 01:31'
+heroImage: './CA8218321F57D52FEA5B3AA54EA07C6B.webp'
+---
+
+## 1. はじめに
+
+執筆時点では、Scala 標準パッケージにも [Toolkit](https://docs.scala-lang.org/toolkit/introduction.html) にも時間を扱う機能が導入されていません。そのため、Scala で時間を扱う際は、Java の資産を使うか、[nscala-time](https://github.com/nscala-time/nscala-time) などの外部パッケージを利用する必要があります。本記事では、Java の資産を使って時間を扱う方法について記述します。
+
+## 2. Java パッケージ
+
+時間を扱う Java パッケージとしては、`java.util.Date` パッケージ、`java.util.Calendar` パッケージ、`java.time` パッケージなどがあります。このうち、`java.util.Date` パッケージと `java.util.Calendar` パッケージは、初期の Java で導入されたレガシーパッケージなので、強い採用理由がない限り、使用は避けた方が良いと思います。一方、`java.time` パッケージは Java 8 で導入された比較的モダンなパッケージです。`java.time` パッケージの特徴としては、不変 (Immutable) オブジェクトを使用しており、スレッドセーフであることが挙げられます。
+
+`java.time` パッケージの中で、よく使うクラスは以下の 5 つです。それぞれのクラスは、以下のような特徴を持ちます。
+
+- LocalDate：日付
+- LocalTime：時刻
+- LocalDateTime：日付 + 時刻
+- OffsetDateTime：日付 + 時刻 + オフセット
+- ZonedDateTime：日付 + 時刻 + オフセット + タイムゾーン
+
+各クラスをインスタンスしたオブジェクトが持つ情報量を、式で表すと以下の通りになります。
+
+LocalDate + LocalTime = LocalDateTime < OffsetDateTime < ZonedDateTime
+
+## 3. 現在時間
+
+`now` メソッドで現在時間を取得できます。上記で挙げた 5 つのクラスは、全て `now` メソッドを継承しています。
+
+```scala
+import java.time.{
+  LocalDate,
+  LocalTime,
+  LocalDateTime,
+  OffsetDateTime,
+  ZonedDateTime
+}
+
+println(LocalDate.now()) // 2024-02-25
+println(LocalTime.now()) // 06:13:00.207692456
+println(LocalDateTime.now()) // 2024-02-25T06:13:00.207930269
+println(OffsetDateTime.now()) // 2024-02-25T06:13:00.208647959Z
+println(ZonedDateTime.now()) // 2024-02-25T06:13:00.209137270Z[GMT]
+```
+
+## 4. 加算減算
+
+加算減算は、`plus` メソッドと `minus` メソッドを使います。
+
+```scala
+import java.time.LocalDate
+
+val today = LocalDate.now()
+val tomorrow = today.plusDays(1) // 1日後
+val yesterday = today.minusDays(1) // 1日前
+
+println(today) // 2024-02-27
+println(tomorrow) // 2024-02-28
+println(yesterday) // 2024-02-26
+```
+
+上記のコードでは、`Days` を使用しています。他にも、`Hours`、`Minutes`、`Months`、`Nanos`、`Seconds`、`Weeks`、`Years` が実装されています。詳しくは、LocalDate クラスのドキュメント [^1] を参照ください。
+
+[^1]: Java Platform SE 8, LocalDate：https://docs.oracle.com/javase/jp/8/docs/api/java/time/LocalDate.html
+
+## 5. フォーマット
+
+時間 (LocalDateTime 型) と String 型を双方向に変換する場合は、`DateTimeFormatter` クラスを使用します。
+
+時間 (LocalDateTime 型) → String 型
+
+```scala
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+val dateTime = LocalDateTime.now()
+val formatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒")
+val formattedDateTime = dateTime.format(formatter)
+println(formattedDateTime) // 2024年02月27日 14時10分18秒
+```
+
+String 型 → 時間 (LocalDateTime 型)
+
+```scala
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+val dateString = "2024年02月27日 14時10分18秒"
+val formatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒")
+val date = LocalDateTime.parse(dateString, formatter)
+println(date) // 2024-02-27T14:10:18
+```
+
+String 型から時間 (LocalDateTime 型) に変換する際、フォーマットパターンを明示的に記述しないといけません。[Day.js](https://day.js.org/) だと、ある程度、暗黙的に変換してくれます。暗黙的な変換に慣れていると、少し不便に感じます。
+
+## 6. タイムスタンプ
+
+時間 (ZonedDateTime 型) → タイムスタンプ (Long 型)
+
+```scala
+import java.time.ZonedDateTime
+
+val zonedDateTime = ZonedDateTime.now()
+val timestamp = zonedDateTime.toInstant.toEpochMilli
+
+println(timestamp) // 1709043232904
+```
+
+タイムスタンプ (Long 型) → ZonedDateTime 型
+
+```scala
+import java.time.{Instant, ZoneId, ZonedDateTime}
+
+val timestamp: Long = 1709043232904L
+val instant = Instant.ofEpochMilli(timestamp)
+val zoneId = ZoneId.systemDefault()
+val zonedDateTime = ZonedDateTime.ofInstant(instant, zoneId)
+
+println(zonedDateTime) // 2024-02-27T23:13:52.904+09:00[Asia/Tokyo]
+```
+
+## 7. おわりに
+
+本記事で解説した内容は `java.time` パッケージのごく一部です。`java.time` パッケージについて詳しく知りたい場合は、公式ドキュメント [^2] を参照してください。
+
+[^2]: Java Platform SE 8, java.time：https://docs.oracle.com/javase/jp/8/docs/api/java/time/package-summary.html
+
+「Scala + 時間」や「Java + 時間」で検索すると、未だに `java.util.Date` パッケージと `java.util.Calendar` パッケージの解説記事が上位に表示されます。上記でも述べましたが、この 2 つはレガシーパッケージなので、強い採用理由が無い限りは、`java.time` パッケージを使用することを推奨します。
+
+`java.time` パッケージは、`java.util.Date` パッケージと `java.util.Calendar` パッケージに比べるとモダンなパッケージです。それでも Java 8 がリリースされたのが 2014 年なので、古臭いと感じる実装部分も多々あります。
+
+現状、Scala Toolkit で時間ライブラリの検討はされていないみたいですが、今後、どうなるかわかりません。期待しながら気長に待ちましょう。
+
+<br />
+
+最後に、Scala の学習にオススメを書籍を以下に示します。
+
+<div class="flex gap-6">
+  <a href="https://amzn.to/3OXJeks" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/812V56VuHQS._SL1500_.jpg" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4bOM7Od" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/717kGJKaZtL._SL1500_.jpg" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4c69eUT" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/81Kn0SMAqYL._SL1500_.jpg" class="m-0" />
+  </a>
+</div>
