@@ -68,3 +68,19 @@ import scala.util.Random
 ここまで、Scala で 16 桁の半角英数字 + 4 桁ごとにハイフンを挿入した文字列を生成するソースコードについて記述してきました。scala.util.Random [^2] では、疑似ランダムな半角英数字を生成する alphanumeric メソッドの他に、一様分布に従った nextInt メソッドやガウス分布に従った nextGaussian メソッドなどがあります。対数正規分布などの分布に基づいた疑似乱数を生成する際は自分で実装するか外部ライブラリを導入する必要があるようです。
 
 [^2]: Scala Standard Library 2.12.4 - scala.util.Random：https://www.scala-lang.org/api/2.12.4/scala/util/Random.html
+
+<br />
+
+最後に、Scala の学習にオススメの書籍を紹介します。
+
+<div class="flex gap-6">
+  <a href="https://amzn.to/3OXJeks" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/812V56VuHQS._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4bOM7Od" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/717kGJKaZtL._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4c69eUT" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/81Kn0SMAqYL._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+</div>

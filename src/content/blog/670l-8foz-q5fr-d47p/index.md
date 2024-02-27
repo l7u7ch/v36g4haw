@@ -107,3 +107,19 @@ class DiscordBot extends ListenerAdapter {
 ## 3. おわりに
 
 ここまで、Scala と JDA を活用して簡単な Discord Bot を作成する手順について記述してきました。JDA を Scala で呼び出すことを想定した情報は、ほとんど無いので、基本的には JDA に関する Java コードを参照して Scala コードに変換して実装することになると思います。このコストを上回る利点は、今のところ無いので、完全にロマン実装だと思います (笑) 。同じロマンを追い求める同志の役に立てば幸いです。
+
+<br />
+
+最後に、Scala の学習にオススメの書籍を紹介します。
+
+<div class="flex gap-6">
+  <a href="https://amzn.to/3OXJeks" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/812V56VuHQS._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4bOM7Od" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/717kGJKaZtL._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4c69eUT" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/81Kn0SMAqYL._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+</div>

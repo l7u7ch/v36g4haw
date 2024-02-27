@@ -87,3 +87,19 @@ Click enter to exit
 ## 6. おわりに
 
 ここまで、Windows に Scala Native の開発環境を構築する方法について記述してきました。これから、Windows で Scala Native を触ってみたい人の参考になれば幸いです。世間では、Scala は JVM 言語であるという印象が強いと思います。実際は、Scala Native の他にも、Scala のソースコードを JavaScript に変換する Scala.js が活発に開発されていたりと、Scala はマルチプラットフォーム言語として日々進化しています。現時点では、Scala Native や Scala.js に対応したエコシステムが、まだまだ成熟途中なので、実運用で活用するのは難しいと思います。将来的に、一度 Scala でソースコードを書けば、マルチプラットフォームに対応できるようになれば魅力的だと思います。
+
+<br />
+
+最後に、Scala の学習にオススメの書籍を紹介します。
+
+<div class="flex gap-6">
+  <a href="https://amzn.to/3OXJeks" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/812V56VuHQS._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4bOM7Od" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/717kGJKaZtL._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+  <a href="https://amzn.to/4c69eUT" aria-label="Scala" rel="nofollow noopener noreferrer" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/81Kn0SMAqYL._SL1500_.jpg" alt="Scala" class="m-0" />
+  </a>
+</div>
