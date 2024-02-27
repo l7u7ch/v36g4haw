@@ -14,6 +14,9 @@ export default defineConfig({
   // https://docs.astro.build/ja/reference/configuration-reference/#site
   site: 'https://xenexe.info/',
 
+  // https://docs.astro.build/ja/reference/configuration-reference/#serverhost
+  server: { host: true },
+
   // https://docs.astro.build/ja/guides/integrations-guide/
   integrations: [
     expressiveCode({
