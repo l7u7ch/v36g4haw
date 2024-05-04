@@ -26,9 +26,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.updatedAt.valu
           posts.map((post) => (
             <tr>
               <td class="border-2 border-slate-800 px-4 py-2 text-center">
-                <a href={`/${post.slug}/`} target="_blank">
-                  🔗
-                </a>
+                <a href={`/${post.slug}/`}>🔗</a>
               </td>
               <td class="border-2 border-slate-800 px-4 py-2">{post.data.title}</td>
               <td class="border-2 border-slate-800 px-4 py-2">{post.slug}</td>
