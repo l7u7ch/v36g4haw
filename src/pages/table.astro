@@ -1,0 +1,47 @@
+---
+import { getCollection, getEntry } from 'astro:content'
+import Layout from '../layouts/Layout.astro'
+import heroImage from '../assets/default-hero-image.png'
+import dayjs from 'dayjs'
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.updatedAt.valueOf() - a.data.updatedAt.valueOf())
+---
+
+<Layout>
+  <>
+    <div class="text-center">合計: {posts.length}</div>
+    <br />
+    <table class="mx-auto">
+      <thead>
+        <tr>
+          <td class="border-2 border-slate-800 px-4 py-2 text-center">LINK</td>
+          <td class="border-2 border-slate-800 px-4 py-2 text-center">TITLE</td>
+          <td class="border-2 border-slate-800 px-4 py-2 text-center">SLUG</td>
+          <td class="border-2 border-slate-800 px-4 py-2 text-center">更新日時</td>
+          <td class="border-2 border-slate-800 px-4 py-2 text-center">更新日時 ▲</td>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          posts.map((post) => (
+            <tr>
+              <td class="border-2 border-slate-800 px-4 py-2 text-center">
+                <a href={`/${post.slug}/`} target="_blank">
+                  🔗
+                </a>
+              </td>
+              <td class="border-2 border-slate-800 px-4 py-2">{post.data.title}</td>
+              <td class="border-2 border-slate-800 px-4 py-2">{post.slug}</td>
+              <td class="border-2 border-slate-800 px-4 py-2">
+                {dayjs(post.data.publishedAt).format(`YYYY-MM-DD HH:MM`)}
+              </td>
+              <td class="border-2 border-slate-800 px-4 py-2">
+                {dayjs(post.data.updatedAt).format(`YYYY-MM-DD HH:MM`)}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </>
+</Layout>
