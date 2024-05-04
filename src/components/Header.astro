@@ -1,14 +1,28 @@
 ---
-import { FaRss } from 'react-icons/fa6'
+import { FaRss, FaTableList } from 'react-icons/fa6'
+import { FaHome } from 'react-icons/fa'
 import { SITE_TITLE } from '../consts'
 ---
 
 <header class="bg-slate-800 p-4">
-  <div class="flex items-center justify-between">
-    <a href="/">{SITE_TITLE}</a>
+  <div class="flex items-center justify-center gap-6">
+    <a
+      aria-label="home"
+      class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 duration-500 hover:bg-slate-600"
+      href="/"
+    >
+      <FaHome />
+    </a>
+    <a
+      aria-label="table"
+      class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 duration-500 hover:bg-slate-600"
+      href="/table"
+    >
+      <FaTableList />
+    </a>
     <a
       aria-label="rss"
-      class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 duration-500 hover:bg-slate-600"
+      class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 duration-500 hover:bg-slate-600"
       href="/rss.xml"
       rel="nofollow noopener noreferrer"
       target="_blank"
