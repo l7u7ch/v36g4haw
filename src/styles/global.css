@@ -27,9 +27,6 @@ ul.contains-task-list > li > input[type='checkbox'] {
 /*
  * Expressive Code：https://expressive-code.com/
  */
-.expressive-code {
-  @apply my-6;
-}
 .expressive-code .frame.is-terminal .header::before {
   background-image: linear-gradient(to right, #c95b5b 30%, 30%, #e0b054 70%, 70%, #62b162);
   opacity: 0.8 !important;
@@ -43,7 +40,7 @@ ul.contains-task-list > li > input[type='checkbox'] {
 }
 
 /* 
- * Tailwind CSS / Typography 
+ * Tailwind CSS / Typography
  */
 .prose {
   @apply dark:prose-invert;
@@ -74,4 +71,19 @@ ul.contains-task-list > li > input[type='checkbox'] {
   @apply prose-th:border-2;
   @apply prose-th:border-slate-700;
   @apply prose-th:p-3;
+}
+
+/* 
+ * TODO
+ */
+.expressive-code {
+  @apply my-6;
+}
+.prose {
+  @apply prose-h2:my-6;
+  @apply prose-h3:my-6;
+  @apply prose-p:my-6;
+}
+#footnote-label {
+  @apply my-6;
 }
