@@ -43,34 +43,32 @@ ul.contains-task-list > li > input[type='checkbox'] {
  * Tailwind CSS / Typography 
  */
 .prose {
-  @apply dark:prose-invert
-  prose-h2:rounded-md
-  prose-h2:bg-slate-700
-  prose-h2:p-6
-  prose-a:text-sky-500
-  prose-a:no-underline
-  hover:prose-a:text-red-600
-  prose-strong:border-b-2
-  prose-strong:border-red-600
-  prose-code:rounded-md
-  prose-code:bg-slate-700
-  prose-code:px-2
-  prose-code:py-1
-  prose-code:text-orange-400
-  prose-code:before:invisible
-  prose-code:after:invisible
-  prose-table:overflow-hidden
-  prose-table:rounded-md
-  prose-th:border-2
-  prose-th:border-slate-700
-  prose-th:bg-slate-700
-  prose-th:p-3
-  prose-td:border-2
-  prose-td:border-slate-700
-  prose-td:p-3
-  prose-img:mx-auto
-  prose-img:rounded-md;
-}
-.prose a {
-  @apply duration-500;
+  @apply dark:prose-invert;
+  @apply hover:prose-a:text-red-600;
+  @apply prose-a:duration-500;
+  @apply prose-a:no-underline;
+  @apply prose-a:text-sky-500;
+  @apply prose-code:after:invisible;
+  @apply prose-code:before:invisible;
+  @apply prose-code:bg-slate-700;
+  @apply prose-code:px-2;
+  @apply prose-code:py-1;
+  @apply prose-code:rounded-md;
+  @apply prose-code:text-orange-400;
+  @apply prose-h2:bg-slate-700;
+  @apply prose-h2:p-6;
+  @apply prose-h2:rounded-md;
+  @apply prose-img:mx-auto;
+  @apply prose-img:rounded-md;
+  @apply prose-strong:border-b-2;
+  @apply prose-strong:border-red-600;
+  @apply prose-table:overflow-hidden;
+  @apply prose-table:rounded-md;
+  @apply prose-td:border-2;
+  @apply prose-td:border-slate-700;
+  @apply prose-td:p-3;
+  @apply prose-th:bg-slate-700;
+  @apply prose-th:border-2;
+  @apply prose-th:border-slate-700;
+  @apply prose-th:p-3;
 }
