@@ -1,5 +1,5 @@
 /*
- * ToDo List in Markdown
+ * Markdown / Task List
  */
 ul.contains-task-list {
   @apply p-0;
@@ -12,7 +12,7 @@ ul.contains-task-list > li > input[type='checkbox'] {
 }
 
 /*
- * Footnotes in Markdown
+ * Markdown / Footnotes
  */
 [id^='user-content-fn-'] > p {
   @apply m-0;
