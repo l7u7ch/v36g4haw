@@ -72,18 +72,6 @@ ul.contains-task-list > li > input[type='checkbox'] {
   @apply prose-th:border-slate-700;
   @apply prose-th:p-3;
 }
-
-/* 
- * TODO
- */
-.expressive-code {
-  @apply my-6;
-}
-.prose {
-  @apply prose-h2:my-6;
-  @apply prose-h3:my-6;
-  @apply prose-p:my-6;
-}
-#footnote-label {
-  @apply my-6;
+.prose > *:not(:first-child):not(:last-child) {
+  @apply my-12;
 }
