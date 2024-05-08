@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 const post = Astro.props
 const { Content, headings } = await post.render()
 
-const title = `${Astro.props.data.title} | ${SITE_TITLE}`
+const title = `${post.data.title} | ${SITE_TITLE}`
 const description = post.body.substring(0, 160)
 
 const updatedDate = dayjs(post.data.updatedAt)
