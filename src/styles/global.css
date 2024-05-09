@@ -65,11 +65,11 @@ ul.contains-task-list > li > input[type='checkbox'] {
   @apply prose-table:overflow-hidden;
   @apply prose-table:rounded-md;
   @apply prose-td:border-2;
-  @apply prose-td:border-slate-700;
+  @apply prose-td:border-slate-600;
   @apply prose-td:p-3;
   @apply prose-th:bg-slate-700;
   @apply prose-th:border-2;
-  @apply prose-th:border-slate-700;
+  @apply prose-th:border-slate-600;
   @apply prose-th:p-3;
 }
 .prose > *:not(:first-child):not(:last-child) {
