@@ -35,10 +35,32 @@ heroImage: './84DA7EA3A967B157405B71FF58A8C659.webp'
 
 ![](./35B143C606B443687BF5940F94BFEF4B.png)
 
-## 3. Buy Me a Coffee (WIP)
+## 3. Buy Me a Coffee
 
-- https://buymeacoffee.com/l7u7ch
-- 最小 $5 から可能
+Buy Me a Coffee で活動を支援する場合の手順は、以下の通りです。
+
+1. アカウントページ (https://buymeacoffee.com/l7u7ch) にアクセスする
+2. 支援する金額を指定する
+3. Support ボタンをクリックする
+4. メールアドレスとカード情報を入力する (ゲストの場合)
+5. 決済手続きを実行する
+
+Buy Me a Coffee で活動を支援する場合の注意事項は、以下の通りです。
+
+- アカウントの登録は不要です
+- $5 から支援可能です [^2.1]
+- 還元率は 95% です [^2.1]
+- 決済方法は、以下に対応しています [^2.1]
+  - 主要なクレジットカードとデビットカード
+  - Apple Pay
+  - Google Pay
+  - Cash App
+  - その他のグローバルな支払い方法
+- 匿名を希望される方は、入力欄を空に設定してください
+
+[^2.1]: Buy Me a Coffee, FAQ：https://buymeacoffee.com/faq
+
+![](8F43D2F934DFA7942CDD8402A1F72B64.png)
 
 ## 4. OFUSE
 
