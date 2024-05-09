@@ -7,7 +7,8 @@ import AuthorProfile from '../components/AuthorProfile.astro'
 import Metadata from '../components/Metadata.astro'
 import TableOfContents from '../components/TableOfContents.astro'
 import Warning from '../components/Warning.astro'
-import Contribution from '../components/Contribution.astro'
+import SupportButton from '../components/SupportButton.astro'
+import EditButton from '../components/EditButton.astro'
 import RelatedPosts from '../components/RelatedPosts.astro'
 import dayjs from 'dayjs'
 
@@ -69,10 +70,13 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
             </>
           )
         }
-        <!-- 2.5. Contribution -->
-        <Contribution id={post.id} />
+        <!-- 2.5. Support -->
+        <SupportButton />
         <br />
-        <!-- 2.6. Related Posts -->
+        <!-- 2.6. Contribution -->
+        <EditButton id={post.id} />
+        <br />
+        <!-- 2.7. Related Posts -->
         <RelatedPosts title={post.data.title} />
       </div>
     </aside>

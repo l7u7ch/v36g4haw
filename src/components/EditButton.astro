@@ -1,0 +1,19 @@
+---
+import { FaHeart, FaPencil } from 'react-icons/fa6'
+
+interface Props {
+  id: string
+}
+
+const { id } = Astro.props
+---
+
+<a
+  class="flex items-center justify-center rounded-md bg-slate-800 py-6 duration-500 hover:bg-slate-700"
+  href={`https://github.com/l7u7ch/xenexe/tree/master/src/content/blog/${id}`}
+  rel="nofollow noopener noreferrer"
+  target="_blank"
+>
+  <FaPencil />
+  &nbsp; この記事を編集する
+</a>
