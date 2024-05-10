@@ -3,8 +3,8 @@ import { FaRotate } from 'react-icons/fa6'
 import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
 import dayjs from 'dayjs'
-import Layout from '../../layouts/Layout.astro'
-import Pagination from '../../components/Pagination.astro'
+import Layout from '../layouts/Layout.astro'
+import Pagination from '../components/Pagination.astro'
 import type { GetStaticPathsOptions } from 'astro'
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
