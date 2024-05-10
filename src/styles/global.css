@@ -77,3 +77,10 @@ ul.contains-task-list > li > input[type='checkbox'] {
 .prose > *:not(:first-child):not(:last-child) {
   @apply my-12;
 }
+
+/*
+ * Alpine.js：https://alpinejs.dev/directives/cloak
+ */
+[x-cloak] {
+  display: none !important;
+}
