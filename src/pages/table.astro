@@ -7,34 +7,36 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.updatedAt.valu
 ---
 
 <Layout>
-  <table class="mx-auto">
+  <div class="text-center">総記事数: {posts.length}</div>
+  <br />
+  <table class="mx-auto overflow-hidden rounded-md">
     <thead>
       <tr>
-        <td class="border-2 border-slate-800 px-4 py-2 text-center">LINK</td>
-        <td class="border-2 border-slate-800 px-4 py-2 text-center">TITLE</td>
-        <td class="border-2 border-slate-800 px-4 py-2 text-center">SLUG</td>
-        <td class="border-2 border-slate-800 px-4 py-2 text-center">公開日時</td>
-        <td class="border-2 border-slate-800 px-4 py-2 text-center">更新日時 ▲</td>
+        <td class="border-2 border-slate-600 bg-slate-700 px-4 py-2 text-center">LINK</td>
+        <td class="border-2 border-slate-600 bg-slate-700 px-4 py-2 text-center">TITLE</td>
+        <td class="border-2 border-slate-600 bg-slate-700 px-4 py-2 text-center">SLUG</td>
+        <td class="border-2 border-slate-600 bg-slate-700 px-4 py-2 text-center">公開日時</td>
+        <td class="border-2 border-slate-600 bg-slate-700 px-4 py-2 text-center">更新日時 ▲</td>
       </tr>
     </thead>
     <tbody>
       {
         posts.map((post) => (
           <tr>
-            <td class="border-2 border-slate-800 px-4 py-2 text-center">
+            <td class="border-2 border-slate-600 bg-slate-800 px-4 py-2 text-center">
               <a href={`/${post.slug}/`}>🔗</a>
             </td>
-            <td class="border-2 border-slate-800 px-4 py-2">{post.data.title}</td>
-            <td class="border-2 border-slate-800 px-4 py-2">{post.slug}</td>
-            <td class="border-2 border-slate-800 px-4 py-2">
+            <td class="border-2 border-slate-600 bg-slate-800 px-4 py-2">{post.data.title}</td>
+            <td class="border-2 border-slate-600 bg-slate-800 px-4 py-2">{post.slug}</td>
+            <td class="border-2 border-slate-600 bg-slate-800 px-4 py-2">
               {dayjs(post.data.publishedAt).format(`YYYY-MM-DD HH:MM`)}
             </td>
-            <td class="border-2 border-slate-800 px-4 py-2">{dayjs(post.data.updatedAt).format(`YYYY-MM-DD HH:MM`)}</td>
+            <td class="border-2 border-slate-600 bg-slate-800 px-4 py-2">
+              {dayjs(post.data.updatedAt).format(`YYYY-MM-DD HH:MM`)}
+            </td>
           </tr>
         ))
       }
     </tbody>
   </table>
-  <br />
-  <div class="text-center">合計: {posts.length}</div>
 </Layout>
