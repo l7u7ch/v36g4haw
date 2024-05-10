@@ -85,3 +85,12 @@ const { title, description, heroImage } = Astro.props
     signalGooglefcPresent()
   })()
 </script>
+
+<!-- Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: '#search', showImages: false })
+  })
+</script>

@@ -37,9 +37,9 @@ import { PiGithubLogoFill } from 'react-icons/pi'
         <div
           x-cloak
           x-show="open"
-          class="fixed left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-50"
+          class="fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-black bg-opacity-50"
         >
-          <div x-on:click.away="open = false" class="max-w-xs bg-red-600 p-4">WIP</div>
+          <div id="search" x-on:click.away="open = false" class="max-w-fit rounded-md bg-slate-800 p-6"></div>
         </div>
       </div>
     </div>
