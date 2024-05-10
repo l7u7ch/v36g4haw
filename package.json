@@ -7,6 +7,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/partytown": "^2.1.0",
@@ -16,8 +17,10 @@
     "@astrojs/tailwind": "^5.1.0",
     "@expressive-code/plugin-line-numbers": "^0.33.5",
     "@tailwindcss/forms": "^0.5.7",
+    "@types/alpinejs": "^3.13.10",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
+    "alpinejs": "^3.13.10",
     "astro": "^4.8.1",
     "astro-expressive-code": "^0.33.5",
     "dayjs": "^1.11.11",

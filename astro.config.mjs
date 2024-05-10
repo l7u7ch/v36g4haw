@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import alpine from '@astrojs/alpinejs'
 import expressiveCode from 'astro-expressive-code'
 import mdx from '@astrojs/mdx'
 import partytown from '@astrojs/partytown'
@@ -19,6 +20,7 @@ export default defineConfig({
 
   // https://docs.astro.build/ja/guides/integrations-guide/
   integrations: [
+    alpine(),
     expressiveCode({
       plugins: [pluginLineNumbers()],
     }),
