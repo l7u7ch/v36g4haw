@@ -64,15 +64,14 @@ ul.contains-task-list > li > input[type='checkbox'] {
   @apply prose-strong:border-red-600;
   @apply prose-table:overflow-hidden;
   @apply prose-table:rounded-md;
+  @apply prose-td:align-middle;
   @apply prose-td:border-2;
   @apply prose-td:border-slate-600;
-  @apply prose-td:px-4;
-  @apply prose-td:py-2;
+  @apply prose-td:p-4;
   @apply prose-th:bg-slate-700;
   @apply prose-th:border-2;
   @apply prose-th:border-slate-600;
-  @apply prose-th:px-4;
-  @apply prose-th:py-2;
+  @apply prose-th:p-4;
 }
 .prose > *:not(:first-child):not(:last-child) {
   @apply my-12;
