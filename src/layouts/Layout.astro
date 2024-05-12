@@ -7,9 +7,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import HERO_IMAGE from '../assets/default-hero-image.png'
 
 interface Props {
-  title: string
-  description: string
-  heroImage: ImageMetadata
+  title?: string
+  description?: string
+  heroImage?: ImageMetadata
 }
 
 const { title = SITE_TITLE, description = SITE_DESCRIPTION, heroImage = HERO_IMAGE } = Astro.props
