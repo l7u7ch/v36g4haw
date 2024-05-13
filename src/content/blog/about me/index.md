@@ -1,7 +1,7 @@
 ---
 title: 'About Me'
 publishedAt: '2024-05-12 19:59'
-updatedAt: '2024-05-13 02:38'
+updatedAt: '2024-05-13 17:41'
 heroImage: './84DA7EA3A967B157405B71FF58A8C659.webp'
 ---
 
@@ -39,14 +39,11 @@ heroImage: './84DA7EA3A967B157405B71FF58A8C659.webp'
 - 以下のクリエイターサポートシステムに対応しています
 - いただいた支援は、創作活動 (機材代、サーバー代、ドメイン代 など) に充てさせていただきます
 
-| Status                                                                       | Service Name        | URL                                                                  |
-| ---------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------- |
-| <span class="rounded-md bg-red-600 px-2 py-1 text-center">Active</span>      | Amazon ギフトカード | https://www.amazon.co.jp/dp/B06X982RQ9 <br /> public.iaic8@slmail.me |
-| <span class="rounded-md bg-red-600 px-2 py-1 text-center">Active</span>      | Buy Me a Coffee     | https://buymeacoffee.com/l7u7ch                                      |
-| <span class="rounded-md bg-red-600 px-2 py-1 text-center">Active</span>      | OFUSE               | https://ofuse.me/l7u7ch                                              |
-| <span class="rounded-md bg-green-600 px-2 py-1 text-center">Preparing</span> | PayPal.me           | https://paypal.me/l7u7ch                                             |
-
-※ 現在、PayPal.me は審査中です。審査が完了次第、ページを更新します。
+| Status                                                                  | Service Name        | URL                                                                  |
+| ----------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------- |
+| <span class="rounded-md bg-red-600 px-2 py-1 text-center">Active</span> | Amazon ギフトカード | https://www.amazon.co.jp/dp/B06X982RQ9 <br /> public.iaic8@slmail.me |
+| <span class="rounded-md bg-red-600 px-2 py-1 text-center">Active</span> | Buy Me a Coffee     | https://buymeacoffee.com/l7u7ch                                      |
+| <span class="rounded-md bg-red-600 px-2 py-1 text-center">Active</span> | OFUSE               | https://ofuse.me/l7u7ch                                              |
 
 ### 4.1. Amazon ギフトカード
 
@@ -130,9 +127,3 @@ OFUSE で活動を支援する場合の注意事項は、以下の通りです�
 ![](./B3A72C3C222E5C0DE9F19A30B0F5A489.png)
 
 ![](./09F4F138D80AE0B0C962B99783AF673B.png)
-
-### 4.4. PayPal.me (WIP)
-
-現在、審査中です。
-
-審査が完了次第、ページを更新します。
