@@ -32,9 +32,9 @@ const elapsedYears = currentDate.diff(updatedDate, 'year')
 ---
 
 <Layout title={title} description={description} heroImage={post.data.heroImage}>
-  <main class="justify-center gap-6 lg:flex" data-pagefind-body>
+  <main class="justify-center gap-6 lg:flex">
     <!-- 1. Article Block -->
-    <article class="prose max-w-full break-words rounded-md bg-slate-800 p-6 lg:max-w-3xl">
+    <article class="prose max-w-full break-words rounded-md bg-slate-800 p-6 lg:max-w-3xl" data-pagefind-body>
       <!-- 1.1. Title -->
       <h1>{post.data.title}</h1>
       <!-- 1.2. Hero Image -->
