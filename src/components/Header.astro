@@ -38,6 +38,8 @@ import { PiGithubLogoFill } from 'react-icons/pi'
           class="fixed inset-0 z-10 flex h-full w-full items-center justify-center bg-black bg-opacity-50"
           x-cloak
           x-show="open"
+          x-trap="open"
+          x-trap.noscroll="open"
         >
           <div class="max-h-full break-all rounded-md bg-slate-800 p-6" id="search" x-on:click.away="open = false">
           </div>

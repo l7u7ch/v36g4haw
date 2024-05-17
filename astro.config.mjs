@@ -20,7 +20,7 @@ export default defineConfig({
 
   // https://docs.astro.build/ja/guides/integrations-guide/
   integrations: [
-    alpine(),
+    alpine({ entrypoint: '/src/entrypoint' }),
     expressiveCode({
       plugins: [pluginLineNumbers()],
     }),
