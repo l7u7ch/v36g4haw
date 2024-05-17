@@ -29,21 +29,20 @@ import { PiGithubLogoFill } from 'react-icons/pi'
       <!-- 1.3. Search -->
       <div x-data="{open: false}">
         <button
-          x-on:click="open = true"
           class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-700 duration-500 hover:bg-slate-600"
+          x-on:click="open = true"
         >
           <FaSearch />
         </button>
-
         <div
+          class="fixed inset-0 z-10 flex h-full w-full items-center justify-center bg-black bg-opacity-50"
           x-cloak
           x-show="open"
-          class="fixed inset-0 z-10 flex h-full w-full items-center justify-center bg-black bg-opacity-50"
         >
           <div
+            class="max-h-full overflow-auto break-all rounded-md bg-slate-800 p-6"
             id="search"
             x-on:click.away="open = false"
-            class="max-h-full overflow-auto break-all rounded-md bg-slate-800 p-6"
           >
           </div>
         </div>
