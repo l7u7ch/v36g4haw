@@ -1,7 +1,7 @@
 ---
 title: 'GHTorrent の MSR 2014 Mining Challenge Dataset の使い方'
 publishedAt: '2023-12-26 00:45'
-updatedAt: '2023-12-26 20:21'
+updatedAt: '2024-07-01 03:09'
 heroImage: './b71d9338.png'
 ---
 
@@ -32,7 +32,7 @@ mysql> create database msr14;
 mysql> GRANT ALL PRIVILEGES ON msr14.* TO 'msr14'@'%';
 mysql> flush privileges;
 mysql> exit
-$ zcat msr14-mysql.gz | mysql -u msr14 -p
+$ zcat msr14-mysql.gz | mysql -u msr14 -p msr14
 Enter password: # msr14 と入力する
 $ mysql -u msr14 -p
 Enter password: # msr14 と入力する
