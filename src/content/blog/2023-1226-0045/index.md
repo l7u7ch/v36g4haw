@@ -34,7 +34,7 @@ mysql> flush privileges;
 mysql> exit
 $ zcat msr14-mysql.gz | mysql -u msr14 -p msr14
 Enter password: # msr14 と入力する
-$ mysql -u msr14 -p
+$ mysql -u msr14 -p msr14
 Enter password: # msr14 と入力する
 mysql> SELECT language, COUNT(*) FROM projects WHERE forked_from IS NULL GROUP BY language;
 +------------+----------+
