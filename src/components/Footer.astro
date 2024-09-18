@@ -5,12 +5,5 @@ const thisYear = new Date().getFullYear()
 ---
 
 <footer class="bg-slate-800 p-4 text-center">
-  <span>{`\u00A9 ${thisYear}`}</span>
-  <a href="/about-me">
-    {AUTHOR_NAME}
-  </a>
-  <span class="text-red-600">❤</span>
-  <a href="https://astro.build/" rel="nofollow noopener noreferrer" target="_blank">
-    {Astro.generator}
-  </a>
+  {`\u00A9 ${thisYear} ${AUTHOR_NAME}`}
 </footer>
