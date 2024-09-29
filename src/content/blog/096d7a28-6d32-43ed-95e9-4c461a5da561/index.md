@@ -1,7 +1,7 @@
 ---
 title: 'Autoware をローカル環境でビルドしてインストールする'
 publishedAt: '2024-04-18 22:54'
-updatedAt: '2024-04-18 22:54'
+updatedAt: '2024-09-30 05:40'
 heroImage: './f7676f044cc84c96d106b56aae733255.webp'
 ---
 
@@ -25,21 +25,22 @@ Autoware には、様々なディストリビューション [^1] が存在し�
 Autoware をローカル環境にインストールする方法は 2 つあります。1 つ目は、公開されている Docker Image を Pull してローカル環境に展開する方法 [^2] です。2 つ目は、ソースコードをビルドしてインストールする方法です [^3] です。本記事では、2 つ目のソースコードをビルドしてインストールする方法について記述します。
 
 [^2]: Docker installation：https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/docker-installation/
+
 [^3]: Source installation：https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/
 
-本記事では、Proxmox 上に以下のスペックの VM 作成し、Autoware をインストールします。
+本記事では、Proxmox 上に VM 作成し、Autoware をインストールします。作成する VM のスペックは以下の通りです。また、GPU はパススルーで運用しています。
 
 | 項目 | 値                  |
 | ---- | ------------------- |
 | OS   | Ubuntu 22.04 LTS    |
-| CPU  | 8 Core              |
-| RAM  | 16 GB               |
-| ROM  | 64 GB               |
+| CPU  | 16 Core             |
+| RAM  | 32 GB               |
+| ROM  | 128 GB              |
 | GPU  | GeForce RTX 4070 Ti |
 
 ## 2. パッケージをインストールする
 
-まず初めに、Git をインストールし、GitHub で公開されている Autoware のリポジトリをローカル環境にクローンします。次に、Autoware のリポジトリ内に含まれる Ansible スクリプトを実行し、ROS 2 や Nvidia CUDA などのパッケージをインストールします。
+まず初めに、Git をインストールし、GitHub で公開されている Autoware のリポジトリをローカル環境にクローンします。次に、Autoware のリポジトリ内に含まれる Ansible スクリプトを実行し、ROS 2 や NVIDIA CUDA などのパッケージをインストールします。
 
 ```bash
 $ sudo apt update
@@ -49,11 +50,41 @@ $ cd ~/autoware
 $ ./setup-dev-env.sh -y
 ```
 
+パッケージのインストールが完了したら再起動します。再起動後、`nvidia-smi` で GPU が認識されているか確認します。
+
+```bash
+$ nvidia-smi
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4070 Ti     Off |   00000000:00:10.0 Off |                  N/A |
+|  0%   44C    P8              4W /  285W |      15MiB /  12282MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A      1747      G   /usr/lib/xorg/Xorg                              4MiB |
++-----------------------------------------------------------------------------------------+
+```
+
 ## 3. ワークスペースを構築する
 
-次に、ワークスペースを構築します。ワークスペースは ROS 2 の概念です。そのため、以下のコマンドで実行されている `vcs` `rosdep` `colcon` は、ROS 2 をインストールする仮定で一緒にインストールされています。これらのコマンドについて詳しく知りたい場合は、ROS 2 の公式ドキュメント [^4] [^5] を参照ください。
+次に、ワークスペースを構築します。ワークスペースは ROS 2 の概念であり、以下の 3 ツールを用いて構築します。これらのコマンドについて詳しく知りたい場合は、ROS 2 の公式ドキュメント [^4] [^5] を参照ください。
+
+- VCS: リポジトリのクローンや管理を一括で行うツールで、複数の ROS 2 プロジェクトを効率的に扱うために使用されます
+- rosdep: ROS 2 パッケージが依存するシステムライブラリやソフトウェアを自動でインストール・管理するツールです
+- colcon: ROS 2 における複数のパッケージを並列にビルド・テストするためのビルドツールです
 
 [^4]: Using colcon to build packages：https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html
+
 [^5]: Managing Dependencies with rosdep：https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html
 
 ```bash
